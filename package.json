@@ -1,7 +1,7 @@
 {
   "name": "react-glitch-effect",
-  "version": "1.0.0",
-  "description": "not yet",
+  "version": "1.0.1",
+  "description": "A glitch effect using CSS animations and clip-path",
   "main": "dist/index.js",
   "babel": {
     "presets": [
@@ -30,17 +30,19 @@
     "build": "webpack --mode production",
     "deploy": "gh-pages -d example/dist",
     "publish-demo": "npm run build && npm run deploy",
-    "prepublish": "npm run transpile",
+    "prepublishOnly": "npm run transpile",
     "publish": "npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sakalx/react-glitch-effect"
+    "url": "https://github.com/sakalx/react-glitch-effect/tree/master"
   },
   "keywords": [
-    "react",
+    "animation",
+    "clip-path",
+    "efect",
     "glitch",
-    "effects"
+    "react"
   ],
   "author": "sakal",
   "license": "MIT",
@@ -55,6 +57,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
     "babel-loader": "^8.0.0",
     "css-loader": "^1.0.0",
     "gh-pages": "^2.0.0",
