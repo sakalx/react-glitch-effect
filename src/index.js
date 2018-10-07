@@ -77,7 +77,7 @@ GlitchEffect.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   duration: PropTypes.string,
-  iterationCount: PropTypes.number,
+  iterationCount: PropTypes.string,
   onHover: PropTypes.bool,
   style: PropTypes.object,
 };
