@@ -1,6 +1,6 @@
 # React glitch-effect-component
  ________________________________________________________
-**[DEMO](**[DEMO](https://sakalx.github.io/Navigate-Dots)**)**
+[DEMO](https://sakalx.github.io/react-glitch-effect/)
 
 >Note that the CSS clip-path property does not work in IE or Edge
 
@@ -9,12 +9,12 @@
 
 #### Props
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| **disabled** | `boolean` | *false* | you secret password for encrypting / decrypting  |
-| **duration** | `string` | *3s* | is should do decryption |
-| **iterationCount** | `string` | *infinite* | is should do decryption |
-| **onHover** | `boolean` | *false* | is should do decryption |
+| Name | Type | Default |
+| --- | --- | --- |
+| **disabled** | `boolean` | *false* |
+| **duration** | `string` | *3s* |
+| **iterationCount** | `string` | *infinite* |
+| **onHover** | `boolean` | *false* 
  ________________________________________________________
  ________________________________________________________
  
