@@ -23,7 +23,7 @@
   import React from 'react';
   import GlitchEffect from 'react-glitch-effect';
   
-  class MyComponen extends React.Component {
+  class MyComponent extends React.Component {
     render() {
       return (
         <GlitchEffect>
@@ -55,7 +55,7 @@ class MyComponen extends React.Component {
 import React from 'react';
 import GlitchEffect from 'react-glitch-effect';
 
-class MyComponen extends React.Component {
+class MyComponent extends React.Component {
     state = {
       disabled: false,
     };
