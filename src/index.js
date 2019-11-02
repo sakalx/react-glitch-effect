@@ -1,73 +1,60 @@
-import React from 'react';
+import React, {useLayoutEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 
 import './style.css';
 
-const variables = {
-  'duration': '--duration-effect',
-  'iterationCount': '--iteration-count',
-};
+function GlitchEffect({
+                        children,
+                        disabled = true,
+                        duration = '3s',
+                        iterationCount = 'infinite',
+                        onHover = false,
+                        onMouseEnter,
+                        onMouseLeave,
+                        ...rest
+                      }) {
+  const refGlitch = useRef(null);
 
-class GlitchEffect extends React.Component {
+  useLayoutEffect(() => {
+    initCSSVariables();
+  }, [duration, iterationCount]);
 
-  componentDidMount() {
-    this.initVariables();
+  useLayoutEffect(() => {
+    !disabled && !onHover ? addGlitchEffect() : removeGlitchEffect();
+  }, [disabled, onHover]);
 
-    if (!this.props.onHover && !this.props.disabled) {
-      this.toggleGlitchEffect()
-    }
-  }
+  const initCSSVariables = () => {
+    const style = refGlitch.current.style;
 
-  componentDidUpdate(prevProps) {
-    if (this.props.disabled !== prevProps.disabled) {
-      this.toggleGlitchEffect()
-    }
-  }
-
-  initVariables = () => {
-    Object.entries(this.props).forEach(([key, value]) => {
-      if (!!variables[key]) {
-        this.setGlitchVariable(variables[key], value)
-      }
-    });
+    style.setProperty('--duration-effect', duration);
+    style.setProperty('--iteration-count', iterationCount);
   };
 
-  setGlitchVariable = (key, value) => {
-    this.refGlitch.style.setProperty(key, value);
+  const handleOnMouseEnter = () => {
+    onMouseEnter && onMouseEnter();
+    onHover && addGlitchEffect();
   };
 
-  toggleGlitchEffect = () => {
-    this.refGlitch.classList.toggle('glitch');
+  const handleOnMouseLeave = () => {
+    onMouseLeave && onMouseLeave();
+    onHover && removeGlitchEffect();
   };
 
-  handleHover = () => {
-    if (!!this.props.onHover) {
-      this.toggleGlitchEffect()
-    }
+  const addGlitchEffect = () => {
+    refGlitch.current.classList.add('glitch');
   };
 
-  render() {
-    const {
-      className = null,
-      style = null,
-    } = this.props;
+  const removeGlitchEffect = () => {
+    refGlitch.current.classList.remove('glitch');
+  };
 
-    return (
-      <div
-        className={className}
-        onMouseEnter={this.handleHover}
-        onMouseLeave={this.handleHover}
-        style={style}
-      >
-        <div
-          className='glitch-variables'
-          ref={refGlitch => this.refGlitch = refGlitch}
-        >
-          {this.props.children}
+  return (
+      <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}{...rest}>
+        <div className='glitch-variables' ref={refGlitch}>
+          {children}
         </div>
       </div>
-    )
-  }
+  );
 }
 
 export default GlitchEffect;
