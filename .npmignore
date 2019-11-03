@@ -1,7 +1,7 @@
 # .npmignore
 
 src
-examples
+example
 .idea
 .gitignore
 webpack.config.js

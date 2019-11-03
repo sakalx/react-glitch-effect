@@ -1,33 +1,10 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FaviconWebpackPlugin = require('favicons-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'example/src/index.html'),
   filename: './index.html'
-});
-
-const favicon = new FaviconWebpackPlugin({
-  logo: `./static/favicon/logo.png`,
-  prefix: 'favicon/',
-  emitStats: false,
-  inject: true,
-  outputPath: '/favicon',
-  background: '#fff',
-  cache: true,
-  favicons: {
-    android: true,
-    appleIcon: true,
-    appleStartup: true,
-    coast: false,
-    favicons: true,
-    firefox: true,
-    opengraph: true,
-    twitter: false,
-    yandex: false,
-    windows: false,
-  },
 });
 
 module.exports = {
@@ -64,5 +41,5 @@ module.exports = {
     inline: true,
   },
 
-  plugins: [htmlWebpackPlugin, favicon],
+  plugins: [htmlWebpackPlugin],
 };
