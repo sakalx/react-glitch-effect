@@ -1,11 +1,9 @@
 # React glitch-effect-component
  ________________________________________________________
 [DEMO](https://sakalx.github.io/react-glitch-effect/)
-
  ________________________________________________________
  ________________________________________________________
 
- ________________________________________________________
 ## Glitch
 
 #### Props
@@ -19,7 +17,7 @@
  ________________________________________________________
  ________________________________________________________
  
- ### Example Functional component
+### Example Functional component
    ```javascript
    import React, {useState} from 'react';
    import GlitchEffect from 'react-glitch-effect';
@@ -42,7 +40,7 @@ const MyComponent = () => {
 };
 ```
 
- ### Example Class component
+### Example Class component
    ```javascript
    import React from 'react';
    import GlitchEffect from 'react-glitch-effect';
