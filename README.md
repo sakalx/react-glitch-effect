@@ -2,10 +2,11 @@
  ________________________________________________________
 [DEMO](https://sakalx.github.io/react-glitch-effect/)
 
->Note that the CSS clip-path property does not work in IE or Edge
+ ________________________________________________________
+ ________________________________________________________
 
  ________________________________________________________
- ________________________________________________________
+## Glitch
 
 #### Props
 
@@ -18,30 +19,30 @@
  ________________________________________________________
  ________________________________________________________
  
-  ### Example Functional component
+ ### Example Functional component
    ```javascript
    import React, {useState} from 'react';
    import GlitchEffect from 'react-glitch-effect';
    
-    const MyComponent = () => {
-      const [isDisabled, setDisabled] = useState(false);
-    
-      const handleToggleGlitch = () => {
-        setDisabled(!isDisabled);
-      };
-    
-      return (
-        <div>
-            <button onClick={handleToggleGlitch}>TOGGLE EFFECT</button>
-            <GlitchEffect disabled={isDisabled}>
-              <h1>Glitch</h1>
-            </GlitchEffect>
-        </div>
-      )
-    };
-   ```
+const MyComponent = () => {
+  const [isDisabled, setDisabled] = useState(false);
 
-  ### Example Class component
+  const handleToggleGlitch = () => {
+    setDisabled(!isDisabled);
+  };
+
+  return (
+    <div>
+        <button onClick={handleToggleGlitch}>TOGGLE EFFECT</button>
+        <GlitchEffect disabled={isDisabled}>
+          <h1>Glitch</h1>
+        </GlitchEffect>
+    </div>
+  )
+};
+```
+
+ ### Example Class component
    ```javascript
    import React from 'react';
    import GlitchEffect from 'react-glitch-effect';
@@ -100,4 +101,43 @@ class MyComponent extends React.Component {
         )
     }
 }
+```
+ ________________________________________________________
+## Text Glitch
+
+#### Props
+
+| Name | Type | Default |
+| --- | --- | --- |
+| **component** | `string` | *span* 
+| **color1** | `string` | *rgba(77, 171, 245, .5)* 
+| **color2** | `string` | *rgba(245, 0, 87, .3)* 
+| **disabled** | `boolean` | *false* |
+| **duration** | `string` | *2s* |
+| **iterationCount** | `string` | *infinite* |
+| **onHover** | `boolean` | *false* 
+ ________________________________________________________
+ ________________________________________________________
+ 
+### Example Text Glitch
+```javascript
+import React, {useState} from 'react';
+import TextGlitch from 'react-glitch-effect/Text';
+
+ const MyComponent = () => {
+   const [isDisabled, setDisabled] = useState(false);
+ 
+   const handleToggleGlitch = () => {
+     setDisabled(!isDisabled);
+   };
+ 
+   return (
+     <div>
+         <button onClick={handleToggleGlitch}>TOGGLE EFFECT</button>
+         <TextGlitch component='h1' disabled={isDisabled}>
+           Glitch
+         </TextGlitch>
+     </div>
+   )
+ };
 ```

@@ -20,7 +20,7 @@ const App = () => {
         <GlitchEffect disabled={isDisabledGlitch.main} style={style.wallpaper}>
           <img style={style.wallpaper__img}
                alt='Background image with glitch effect'
-               src='https://i.ibb.co/M8RHHBN/main.jpg'/>
+               src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/static/img/main.jpg'/>
         </GlitchEffect>
 
         <div style={style.row}>
@@ -52,7 +52,7 @@ const App = () => {
               </figcaption>
               <img style={style.portrait__img}
                    alt='Image with glitch effect when hoover'
-                   src='https://i.ibb.co/MRKBztH/secondary.jpg'/>
+                   src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/static/img/secondary.jpg'/>
             </figure>
           </GlitchEffect>
         </section>
