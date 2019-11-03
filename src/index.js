@@ -6,8 +6,8 @@ import './style.css';
 function GlitchEffect({
                         children,
                         disabled = false,
-                        duration = '3s',
-                        iterationCount = 'infinite',
+                        duration,
+                        iterationCount,
                         onHover = false,
                         onMouseEnter,
                         onMouseLeave,
@@ -26,8 +26,8 @@ function GlitchEffect({
   const initCSSVariables = () => {
     const style = refGlitch.current.style;
 
-    style.setProperty('--duration-effect', duration);
-    style.setProperty('--iteration-count', iterationCount);
+    duration && style.setProperty('--duration-effect', duration);
+    iterationCount && style.setProperty('--iteration-count', iterationCount);
   };
 
   const handleOnMouseEnter = () => {

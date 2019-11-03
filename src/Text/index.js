@@ -5,12 +5,12 @@ import './style.css';
 
 function Text({
                 children,
-                color1 = 'rgba(77, 171, 245, .5)',
-                color2 = 'rgba(245, 0, 87, .3)',
+                color1,
+                color2,
                 component = 'span',
                 disabled = false,
-                duration = '2s',
-                iterationCount = 'infinite',
+                duration,
+                iterationCount,
                 onHover = false,
                 onMouseEnter,
                 onMouseLeave,
@@ -24,7 +24,7 @@ function Text({
 
   useLayoutEffect(() => {
     initCSSVariables();
-  }, [duration, iterationCount]);
+  }, [color1, color2, duration, iterationCount]);
 
   useLayoutEffect(() => {
     !disabled && !onHover ? addGlitchEffect() : removeGlitchEffect();
@@ -41,10 +41,10 @@ function Text({
   const initCSSVariables = () => {
     const style = refTextGlitch.current.style;
 
-    style.setProperty('--_s-color-text-effect-1', color1);
-    style.setProperty('--_s-color-text-effect-2', color2);
-    style.setProperty('_s-duration-text-effect', duration);
-    style.setProperty('_s-iteration-text-effect-count', iterationCount);
+    color1 && style.setProperty('--_s-color-text-effect-1', color1);
+    color2 && style.setProperty('--_s-color-text-effect-2', color2);
+    duration && style.setProperty('_s-duration-text-effect', duration);
+    iterationCount && style.setProperty('_s-iteration-text-effect-count', iterationCount);
   };
 
   const handleOnMouseEnter = () => {
