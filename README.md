@@ -1,13 +1,13 @@
-# React glitch-effect-component
+# React glitch-effect-components
  ________________________________________________________
 [DEMO](https://sakalx.github.io/react-glitch-effect/)
  ________________________________________________________
  ________________________________________________________
 
-## Glitch
+## Clip Glitch Component
+`import GlitchClip from 'react-glitch-effect/core/Clip';`
 
 #### Props
-
 | Name | Type | Default |
 | --- | --- | --- |
 | **disabled** | `boolean` | *false* |
@@ -17,10 +17,24 @@
  ________________________________________________________
  ________________________________________________________
  
-### Example Functional component
-   ```javascript
-   import React, {useState} from 'react';
-   import GlitchEffect from 'react-glitch-effect';
+### Example Clip glitch effect component
+ ```javascript
+ import React from 'react';
+ import GlitchClip from 'react-glitch-effect/core/Clip';
+ 
+const MyComponent = () => {
+    return (
+      <GlitchClip>
+        <h1>Glitch</h1>
+      </GlitchClip>
+    )
+ }
+ ```
+
+### Manually trigger example Clip glitch effect component
+```javascript
+import React, {useState} from 'react';
+import GlitchClip from 'react-glitch-effect/core/Clip';
    
 const MyComponent = () => {
   const [isDisabled, setDisabled] = useState(false);
@@ -32,79 +46,35 @@ const MyComponent = () => {
   return (
     <div>
         <button onClick={handleToggleGlitch}>TOGGLE EFFECT</button>
-        <GlitchEffect disabled={isDisabled}>
+        <GlitchClip disabled={isDisabled}>
           <h1>Glitch</h1>
-        </GlitchEffect>
+        </GlitchClip>
     </div>
   )
 };
 ```
 
-### Example Class component
-   ```javascript
-   import React from 'react';
-   import GlitchEffect from 'react-glitch-effect';
-
-   class MyComponent extends React.Component {
-     render() {
-       return (
-         <GlitchEffect>
-           <h1>Glitch</h1>
-         </GlitchEffect>
-       )
-     }
-   }
-   ```
-   
-### Example with hover
+### Example Clip glitch effect with on hover
 ```javascript
 import React from 'react';
-import GlitchEffect from 'react-glitch-effect';
+import GlitchClip from 'react-glitch-effect/core/Clip';
 
-class MyComponent extends React.Component {
-  render() {
+const MyComponent = () => {
     return (
-      <GlitchEffect onHover={true}>
+      <GlitchClip onHover={true}>
         <h1>Glitch</h1>
-      </GlitchEffect>
+      </GlitchClip>
     )
-  }
 }
 ```
 
-### Example toggle effect
-```javascript
-import React from 'react';
-import GlitchEffect from 'react-glitch-effect';
-
-class MyComponent extends React.Component {
-    state = {
-      disabled: false,
-    };
-    
-    handleToggleGlitch = () => {
-      this.setState(state => ({disabled: !state.disabled}))
-    };
-    
-    render() {
-        return (
-         <GlitchEffect disabled={this.state.disabled}>
-            <div>
-                <button onClick={this.handleToggleGlitch}>
-                  Toggle
-                </button>
-                <h1>Glitch</h1>
-            </div>
-        </GlitchEffect>
-        )
-    }
-}
-```
  ________________________________________________________
-## Text Glitch
+ ________________________________________________________
+ 
+## Text Glitch Component
+`import GlitchClip from 'react-glitch-effect/core/Text';`
 
 #### Props
-
 | Name | Type | Default |
 | --- | --- | --- |
 | **component** | `string` | *span* 
@@ -117,10 +87,10 @@ class MyComponent extends React.Component {
  ________________________________________________________
  ________________________________________________________
  
-### Example Text Glitch
+### Example Text glitch effect component
 ```javascript
 import React, {useState} from 'react';
-import TextGlitch from 'react-glitch-effect/Text';
+import GlitchText from 'react-glitch-effect/core/Text';
 
  const MyComponent = () => {
    const [isDisabled, setDisabled] = useState(false);
@@ -132,9 +102,9 @@ import TextGlitch from 'react-glitch-effect/Text';
    return (
      <div>
          <button onClick={handleToggleGlitch}>TOGGLE EFFECT</button>
-         <TextGlitch component='h1' disabled={isDisabled}>
+         <GlitchText component='h1' disabled={isDisabled}>
            Glitch
-         </TextGlitch>
+         </GlitchText>
      </div>
    )
  };

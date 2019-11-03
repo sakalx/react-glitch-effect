@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 
 import './style.css';
 
-function GlitchEffect({
-                        children,
-                        disabled = false,
-                        duration,
-                        iterationCount,
-                        onHover = false,
-                        onMouseEnter,
-                        onMouseLeave,
-                        ...rest
-                      }) {
+function Clip({
+                children,
+                disabled = false,
+                duration,
+                iterationCount,
+                onHover = false,
+                onMouseEnter,
+                onMouseLeave,
+                ...rest
+              }) {
   const refGlitch = useRef(null);
 
   useLayoutEffect(() => {
@@ -57,9 +57,9 @@ function GlitchEffect({
   );
 }
 
-export default GlitchEffect;
+export default Clip;
 
-GlitchEffect.propTypes = {
+Clip.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   disabled: PropTypes.bool,

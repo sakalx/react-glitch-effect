@@ -1,6 +1,6 @@
 {
   "name": "react-glitch-effect",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A glitch effect using CSS animations and clip-path",
   "main": "dist/index.js",
   "babel": {
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "transpile": "babel src -d dist --copy-files",
+    "transpile": "babel src -d core --copy-files",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d example/dist",
     "publish-demo": "npm run build && npm run deploy",

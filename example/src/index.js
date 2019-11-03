@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {render} from 'react-dom';
-import GlitchEffect from '../../src';
+import GlitchClipEffect from '../../src/Clip';
 import GlitchText from '../../src/Text';
 
 import style from './style';
@@ -17,11 +17,11 @@ const App = () => {
 //
   return (
       <main style={style.wrap}>
-        <GlitchEffect disabled={isDisabledGlitch.main} style={style.wallpaper}>
+        <GlitchClipEffect disabled={isDisabledGlitch.main} style={style.wallpaper}>
           <img style={style.wallpaper__img}
                alt='Background image with glitch effect'
-               src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/static/img/main.jpg'/>
-        </GlitchEffect>
+               src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/main.jpg'/>
+        </GlitchClipEffect>
 
         <div style={style.row}>
           <section>
@@ -37,27 +37,27 @@ const App = () => {
             TOGGLE MAIN GLITCH
           </button>
         </div>
-        <GlitchEffect disabled={isDisabledGlitch.main} duration='1s' style={style.title}>
+        <GlitchClipEffect disabled={isDisabledGlitch.main} duration='1s' style={style.title}>
           <h1 style={{margin: 24}}>Glitch</h1>
-        </GlitchEffect>
+        </GlitchClipEffect>
 
         <section style={style.row}>
           <GlitchText onHover={true} component='h5' style={style.title}>
             Hover this text
           </GlitchText>
-          <GlitchEffect onHover={true}>
+          <GlitchClipEffect onHover={true}>
             <figure>
               <figcaption style={style.portrait__title}>
                 Hover me
               </figcaption>
               <img style={style.portrait__img}
                    alt='Image with glitch effect when hoover'
-                   src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/static/img/secondary.jpg'/>
+                   src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg'/>
             </figure>
-          </GlitchEffect>
+          </GlitchClipEffect>
         </section>
       </main>
   );
 };
-// https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/static/img/secondary.jpg
+
 render(<App/>, document.getElementById('root'));
