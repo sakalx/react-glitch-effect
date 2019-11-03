@@ -1,33 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {render} from 'react-dom';
 import GlitchEffect from '../../src';
 
-class App extends React.Component {
-  state = {
-    disabled: false,
+const App = () => {
+  const [isDisabled, setDisabled] = useState(false);
+
+  const handleToggleGlitch = () => {
+    setDisabled(!isDisabled);
   };
 
-  handleToggleGlitch = () => {
-    this.setState(state => ({disabled: !state.disabled}))
-  };
-
-  render() {
-    const {disabled} = this.state;
-
-    return (
+  return (
       <div style={styles.wrap}>
-        <GlitchEffect disabled={disabled} style={styles.wallpaper}>
+        <GlitchEffect disabled={isDisabled} style={styles.wallpaper}>
           <img style={styles.wallpaper__img}
+               alt='Background image with glitch effect'
                src={'https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/static/img/store-1245758_1920.jpg'}/>
         </GlitchEffect>
 
-        <button style={styles.button__toggle}
-                onClick={this.handleToggleGlitch}
-        >
+        <button style={styles.button__toggle} onClick={handleToggleGlitch}>
           Toggle
         </button>
 
-        <GlitchEffect disabled={disabled} duration='1s' style={styles.title}>
+        <GlitchEffect disabled={isDisabled} duration='1s' style={styles.title}>
           <h1>Glitch Effect</h1>
         </GlitchEffect>
 
@@ -37,13 +31,13 @@ class App extends React.Component {
               Hover me
             </figcaption>
             <img style={styles.portrait__img}
+                 alt='Image with glitch effect when hoover'
                  src={'https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/static/img/oldtimer-1245746_1920.jpg'}/>
           </figure>
         </GlitchEffect>
       </div>
-    )
-  }
-}
+  );
+};
 
 const styles = {
   wrap: {
@@ -91,4 +85,4 @@ const styles = {
 
 };
 
-render(<App/>, document.getElementById("root"));
+render(<App/>, document.getElementById('root'));
