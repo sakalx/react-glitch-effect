@@ -5,7 +5,7 @@ import './style.css';
 
 function GlitchEffect({
                         children,
-                        disabled = true,
+                        disabled = false,
                         duration = '3s',
                         iterationCount = 'infinite',
                         onHover = false,
