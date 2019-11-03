@@ -18,28 +18,51 @@
  ________________________________________________________
  ________________________________________________________
  
- ### Example
-  ```javascript
-  import React from 'react';
-  import GlitchEffect from 'react-glitch-effect';
-  
-  class MyComponent extends React.Component {
-    render() {
+  ### Example Functional component
+   ```javascript
+   import React, {useState} from 'react';
+   import GlitchEffect from 'react-glitch-effect';
+   
+    const MyComponent = () => {
+      const [isDisabled, setDisabled] = useState(false);
+    
+      const handleToggleGlitch = () => {
+        setDisabled(!isDisabled);
+      };
+    
       return (
-        <GlitchEffect>
-          <h1>Glitch</h1>
-        </GlitchEffect>
+        <div>
+            <button onClick={handleToggleGlitch}>TOGGLE EFFECT</button>
+            <GlitchEffect disabled={isDisabled}>
+              <h1>Glitch</h1>
+            </GlitchEffect>
+        </div>
       )
-    }
-  }
-  ```
-  
+    };
+   ```
+
+  ### Example Class component
+   ```javascript
+   import React from 'react';
+   import GlitchEffect from 'react-glitch-effect';
+
+   class MyComponent extends React.Component {
+     render() {
+       return (
+         <GlitchEffect>
+           <h1>Glitch</h1>
+         </GlitchEffect>
+       )
+     }
+   }
+   ```
+   
 ### Example with hover
 ```javascript
 import React from 'react';
 import GlitchEffect from 'react-glitch-effect';
 
-class MyComponen extends React.Component {
+class MyComponent extends React.Component {
   render() {
     return (
       <GlitchEffect onHover={true}>
