@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {render} from 'react-dom';
 import GlitchClipEffect from '../../src/Clip';
 import GlitchText from '../../src/Text';
+import Squiggly from '../../src/Squiggly';
 
 import style from './style';
 
@@ -17,6 +18,12 @@ const App = () => {
 //
   return (
       <main style={style.wrap}>
+          <Squiggly>
+              <h1 style={{color: 'red'}}>hello</h1>
+          </Squiggly>
+
+
+{/*
         <GlitchClipEffect disabled={isDisabledGlitch.main} style={style.wallpaper}>
           <img style={style.wallpaper__img}
                alt='Background image with glitch effect'
@@ -55,7 +62,7 @@ const App = () => {
                    src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg'/>
             </figure>
           </GlitchClipEffect>
-        </section>
+        </section>*/}
       </main>
   );
 };
