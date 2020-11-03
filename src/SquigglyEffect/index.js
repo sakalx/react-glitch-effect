@@ -1,5 +1,7 @@
-import React, {memo} from 'react';
+import React, {useRef, memo} from 'react';
 import PropTypes from 'prop-types';
+
+import useOnChangeCssVariablesEffect from './hooks/useOnChangeCssVariablesEffect'
 
 import SvgFilters from "./components/SvgFilters";
 
@@ -9,18 +11,24 @@ function SquigglyEffect({
                             baseFrequency = 0.02,
                             children,
                             disabled = false,
+                            iterationCount,
                             onHover = false,
                             onMouseEnter,
                             onMouseLeave,
                             scaleNoise = 5,
-                            speed = 0.34,
+                            speed,
                             ...rest
                         }) {
+    const squigglyContainerRef = useRef(null)
+
+    useOnChangeCssVariablesEffect(squigglyContainerRef, {iterationCount, speed})
 
     return (
-        <div id='squiggly__container' {...rest}>
-            {children}
-            <SvgFilters baseFrequency={baseFrequency} scaleNoise={scaleNoise}/>
+        <div {...rest}>
+            <div id='squiggly__container' ref={squigglyContainerRef}>
+                {children}
+                <SvgFilters baseFrequency={baseFrequency} scaleNoise={scaleNoise}/>
+            </div>
         </div>
     );
 }
@@ -31,6 +39,7 @@ SquigglyEffect.propTypes = {
     baseFrequency: PropTypes.number,
     children: PropTypes.node.isRequired,
     disabled: PropTypes.bool,
+    iterationCount: PropTypes.string,
     onHover: PropTypes.bool,
     scaleNoise: PropTypes.number,
     speed: PropTypes.number,

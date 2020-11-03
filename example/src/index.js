@@ -15,14 +15,43 @@ const App = () => {
   const handleToggleGlitch = name => () => {
     setDisabledGlitch(pre => ({...pre, [name]: !isDisabledGlitch[name]}));
   };
-//
+
+  const [speed, setSpeed] = useState(0.1);
+  const [baseFrequency, setBaseFrequency] = useState(0.02);
+  const [scaleNoise, setScaleNoise] = useState(5);
+
+  const foo = () => {
+      const newValue = speed + 0.1;
+      setSpeed(newValue)
+  };
+  const bar = () => {
+      const newValue = baseFrequency + 0.1;
+      setBaseFrequency(newValue)
+  };
+  const baz = () => {
+      const newValue = scaleNoise + 0.5;
+      setScaleNoise(newValue)
+  };
+
+  const reset = () => {
+      setSpeed(0.1);
+      setBaseFrequency(0.02);
+      setScaleNoise(5);
+  }
+
   return (
       <main style={style.wrap}>
-          <SquigglyEffect>
+          <button onClick={reset}>RESET</button>
+          <button onClick={foo}>Slow down Speed</button>
+          <button onClick={bar}>Increase scaleNoise</button>
+          <button onClick={baz}>Increase baseFrequency</button>
+
+
+          <SquigglyEffect speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
               <h1 style={{color: 'black'}}>hello</h1>
           </SquigglyEffect>
           <h2 style={{color: 'black'}}>hello</h2>
-          <SquigglyEffect>
+          <SquigglyEffect speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
               <img style={style.portrait__img}
                    alt='Image with glitch effect when hoover'
                    src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg'/>
