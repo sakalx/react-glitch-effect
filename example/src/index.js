@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {render} from 'react-dom';
 import GlitchClipEffect from '../../src/Clip';
 import GlitchText from '../../src/Text';
-import Squiggly from '../../src/Squiggly';
+import SquigglyEffect from '../../src/SquigglyEffect';
 
 import style from './style';
 
@@ -18,10 +18,15 @@ const App = () => {
 //
   return (
       <main style={style.wrap}>
-          <Squiggly>
-              <h1 style={{color: 'red'}}>hello</h1>
-          </Squiggly>
-
+          <SquigglyEffect>
+              <h1 style={{color: 'black'}}>hello</h1>
+          </SquigglyEffect>
+          <h2 style={{color: 'black'}}>hello</h2>
+          <SquigglyEffect>
+              <img style={style.portrait__img}
+                   alt='Image with glitch effect when hoover'
+                   src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg'/>
+          </SquigglyEffect>
 
 {/*
         <GlitchClipEffect disabled={isDisabledGlitch.main} style={style.wallpaper}>

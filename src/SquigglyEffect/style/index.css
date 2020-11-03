@@ -1,0 +1,25 @@
+@keyframes squiggly-effect {
+    0% {
+        filter: url('#squiggly__filter-0');
+    }
+    25% {
+        filter: url('#squiggly__filter-1');
+    }
+    50% {
+        filter: url('#squiggly__filter-2');
+    }
+    75% {
+        filter: url('#squiggly__filter-3');
+    }
+    100% {
+        filter: url('#squiggly__filter-4');
+    }
+}
+
+#squiggly__container {
+    animation: squiggly-effect .34s cubic-bezier(.57,.21,.69,3.25) infinite;
+}
+
+#squiggly__svg-filters {
+    display: none;
+}
