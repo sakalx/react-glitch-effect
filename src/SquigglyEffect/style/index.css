@@ -1,3 +1,25 @@
+#squiggly__container {
+    --speed: .34s;
+    --iteration-count: infinite;
+
+    -webkit-animation-name: squiggly-effect;
+    animation-name: squiggly-effect;
+
+    -webkit-animation-duration: var(--speed);
+    animation-duration: var(--speed);
+
+    -webkit-animation-timing-function: cubic-bezier(.57,.21,.69,3.25);
+    animation-timing-function: cubic-bezier(.57,.21,.69,3.25);
+
+    -webkit-animation-iteration-count: var(--iteration-count);
+    animation-iteration-count: var(--iteration-count);
+}
+
+#squiggly__svg-filters {
+    height: 0;
+    width: 0;
+}
+
 @-webkit-keyframes squiggly-effect {
     0% {
         -webkit-filter: url('#squiggly__filter-0');
@@ -42,14 +64,4 @@
         -webkit-filter: url('#squiggly__filter-4');
         filter: url('#squiggly__filter-4');
     }
-}
-
-#squiggly__container {
-    -webkit-animation: squiggly-effect .34s cubic-bezier(.57,.21,.69,3.25) infinite;
-    animation: squiggly-effect .34s cubic-bezier(.57,.21,.69,3.25) infinite;
-}
-
-#squiggly__svg-filters {
-    height: 0;
-    width: 0;
 }
