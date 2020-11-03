@@ -1,25 +1,55 @@
-@keyframes squiggly-effect {
+@-webkit-keyframes squiggly-effect {
     0% {
+        -webkit-filter: url('#squiggly__filter-0');
         filter: url('#squiggly__filter-0');
     }
     25% {
+        -webkit-filter: url('#squiggly__filter-1');
         filter: url('#squiggly__filter-1');
     }
     50% {
+        -webkit-filter: url('#squiggly__filter-2');
         filter: url('#squiggly__filter-2');
     }
     75% {
+        -webkit-filter: url('#squiggly__filter-3');
         filter: url('#squiggly__filter-3');
     }
     100% {
+        -webkit-filter: url('#squiggly__filter-4');
+        filter: url('#squiggly__filter-4');
+    }
+}
+
+@keyframes squiggly-effect {
+    0% {
+        -webkit-filter: url('#squiggly__filter-0');
+        filter: url('#squiggly__filter-0');
+    }
+    25% {
+        -webkit-filter: url('#squiggly__filter-1');
+        filter: url('#squiggly__filter-1');
+    }
+    50% {
+        -webkit-filter: url('#squiggly__filter-2');
+        filter: url('#squiggly__filter-2');
+    }
+    75% {
+        -webkit-filter: url('#squiggly__filter-3');
+        filter: url('#squiggly__filter-3');
+    }
+    100% {
+        -webkit-filter: url('#squiggly__filter-4');
         filter: url('#squiggly__filter-4');
     }
 }
 
 #squiggly__container {
+    -webkit-animation: squiggly-effect .34s cubic-bezier(.57,.21,.69,3.25) infinite;
     animation: squiggly-effect .34s cubic-bezier(.57,.21,.69,3.25) infinite;
 }
 
 #squiggly__svg-filters {
-    display: none;
+    height: 0;
+    width: 0;
 }

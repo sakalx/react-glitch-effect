@@ -18,7 +18,7 @@ function SquigglyEffect({
                         }) {
 
     return (
-        <div id='squiggly__container'>
+        <div id='squiggly__container' {...rest}>
             {children}
             <SvgFilters baseFrequency={baseFrequency} scaleNoise={scaleNoise}/>
         </div>
