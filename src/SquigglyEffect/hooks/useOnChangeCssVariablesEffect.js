@@ -1,11 +1,16 @@
 import React, {useLayoutEffect} from 'react';
 
-export default (squigglyContainerRef, {iterationCount, speed}) => {
+import pipe from '../../utils/generic/pipe';
+import setStyleProperty from '../../utils/HTML_API/setStyleProperty';
+
+const setIterationCount = setStyleProperty('--iteration-count');
+const setSpeed = setStyleProperty('--speed');
+
+export default (squigglyAnimationRef, {iterationCount, speed}) => {
     useLayoutEffect(() => {
-        const {style} = squigglyContainerRef.current;
-
-        iterationCount && style.setProperty('--iteration-count', iterationCount);
-        speed && style.setProperty('--speed', `${speed}s`);
-
+        pipe(
+            setIterationCount(iterationCount),
+            setSpeed(`${speed}ms`),
+        )(squigglyAnimationRef);
     }, [iterationCount, speed])
 }
