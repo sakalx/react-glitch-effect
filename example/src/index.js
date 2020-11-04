@@ -16,12 +16,12 @@ const App = () => {
     setDisabledGlitch(pre => ({...pre, [name]: !isDisabledGlitch[name]}));
   };
 
-  const [speed, setSpeed] = useState(340);
+  const [speed, setSpeed] = useState(0.1);
   const [baseFrequency, setBaseFrequency] = useState(0.02);
   const [scaleNoise, setScaleNoise] = useState(5);
 
   const foo = () => {
-      const newValue = speed + 10;
+      const newValue = speed + 0.1;
       setSpeed(newValue)
   };
   const bar = () => {

@@ -7,7 +7,7 @@ import SvgFilters from "./components/SvgFilters";
 
 import './style/index.css';
 
-const SquigglyEffect = ({
+function SquigglyEffect({
                             baseFrequency = 0.02,
                             children,
                             disabled = false,
@@ -18,14 +18,14 @@ const SquigglyEffect = ({
                             scaleNoise = 5,
                             speed,
                             ...rest
-                        }) => {
-    const squigglyAnimationRef = useRef(null)
+                        }) {
+    const squigglyContainerRef = useRef(null)
 
-    useOnChangeCssVariablesEffect(squigglyAnimationRef, {iterationCount, speed});
+    useOnChangeCssVariablesEffect(squigglyContainerRef, {iterationCount, speed})
 
     return (
         <div {...rest}>
-            <div id='squiggly__animation' ref={squigglyAnimationRef}>
+            <div id='squiggly__container' ref={squigglyContainerRef}>
                 {children}
                 <SvgFilters baseFrequency={baseFrequency} scaleNoise={scaleNoise}/>
             </div>
