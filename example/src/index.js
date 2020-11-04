@@ -19,6 +19,7 @@ const App = () => {
   const [speed, setSpeed] = useState(340);
   const [baseFrequency, setBaseFrequency] = useState(0.02);
   const [scaleNoise, setScaleNoise] = useState(5);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const foo = () => {
       const newValue = speed + 10;
@@ -45,13 +46,14 @@ const App = () => {
           <button onClick={foo}>Slow down Speed</button>
           <button onClick={bar}>Increase scaleNoise</button>
           <button onClick={baz}>Increase baseFrequency</button>
+          <button onClick={() => setIsDisabled(!isDisabled)}>Toggle Animation</button>
 
 
-          <SquigglyEffect speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
+          <SquigglyEffect disabled={isDisabled} speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
               <h1 style={{color: 'black'}}>hello</h1>
           </SquigglyEffect>
           <h2 style={{color: 'black'}}>hello</h2>
-          <SquigglyEffect speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
+          <SquigglyEffect onHover={true} speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
               <img style={style.portrait__img}
                    alt='Image with glitch effect when hoover'
                    src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg'/>
