@@ -12,7 +12,7 @@ import './style/index.css';
 
 const ID_EFFECT = 'squiggly__animation';
 
-function SquigglyEffect({
+const SquigglyEffect = ({
                             baseFrequency = 0.02,
                             children,
                             disabled = false,
@@ -23,14 +23,23 @@ function SquigglyEffect({
                             scaleNoise = 5,
                             speed,
                             ...rest
-                        }) {
-    const squigglyContainerRef = useRef(null)
+                        }) => {
+    const squigglyAnimationRef = useRef(null);
 
-    useOnChangeCssVariablesEffect(squigglyContainerRef, {iterationCount, speed})
+    const toggleAnimation = useToggleAnimation({ref: squigglyAnimationRef, id: ID_EFFECT});
+
+    const {handleOnMouseEnter, handleOnMouseLeave} = useOnHover({
+        callbackEvents: {onMouseEnter, onMouseLeave},
+        onHover,
+        toggleAnimation,
+    });
+
+    useOnChangeCssVariablesEffect(squigglyAnimationRef, {iterationCount, speed});
+    useOnChangeDisabledEffect(toggleAnimation, {disabled, onHover});
 
     return (
         <div {...rest}>
-            <div id='squiggly__container' ref={squigglyContainerRef}>
+            <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave} ref={squigglyAnimationRef}>
                 {children}
                 <SvgFilters baseFrequency={baseFrequency} scaleNoise={scaleNoise}/>
             </div>
