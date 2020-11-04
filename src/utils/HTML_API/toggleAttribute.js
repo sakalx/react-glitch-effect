@@ -8,6 +8,6 @@ export const addAttribute = qualifiedName => elementRef => value => {
 }
 
 export const removeAttribute = qualifiedName => elementRef => () => {
-    if (isValidValue(value)) elementRef.current?.removeAttribute(qualifiedName,);
+    elementRef.current?.removeAttribute(qualifiedName,);
     return elementRef;
 }
