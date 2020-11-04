@@ -1,29 +1,8 @@
 {
   "name": "react-glitch-effect",
   "version": "2.0.2",
-  "description": "A glitch effect using CSS animations and clip-path",
+  "description": "A glitch effects",
   "main": "dist/index.js",
-  "babel": {
-    "presets": [
-      [
-        "@babel/env",
-        {
-          "targets": {
-            "browsers": [
-              "> 1%",
-              "ie >= 11",
-              "not op_mini all"
-            ]
-          }
-        }
-      ],
-      "@babel/react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "@babel/transform-runtime"
-    ]
-  },
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "transpile": "babel src -d core --copy-files",
@@ -51,24 +30,27 @@
   "author": "Serhii Sakal <sakals@mail.ua>",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
-    "@babel/core": "^7.6.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
-    "@babel/runtime": "^7.6.3",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.12.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/runtime": "^7.12.5",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
     "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "style-loader": "^1.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "style-loader": "^2.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.11.0"
