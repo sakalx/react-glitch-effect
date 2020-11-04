@@ -1,5 +1,5 @@
-#squiggly__container {
-    --speed: .34s;
+#squiggly__animation {
+    --speed: 340ms;
     --iteration-count: infinite;
 
     -webkit-animation-name: squiggly-effect;
