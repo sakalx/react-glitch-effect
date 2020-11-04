@@ -5,4 +5,4 @@ export default (toggleAnimation, {disabled, onHover}) => {
         const isAnimationEnabled = !disabled && !onHover;
         isAnimationEnabled ? toggleAnimation.addAnimation() : toggleAnimation.removeAnimation();
     }, [disabled, onHover]);
-}
+};

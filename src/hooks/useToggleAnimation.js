@@ -17,5 +17,5 @@ export default ({ref, id}) => {
     return ({
         addAnimation,
         removeAnimation,
-    })
+    });
 };

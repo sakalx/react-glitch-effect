@@ -1,6 +1,8 @@
 import React, {useRef, memo} from 'react';
 import PropTypes from 'prop-types';
 
+import useOnChangeDisabledEffect from '../hooks/useOnChangeDisabledEffect';
+import useOnHover from '../hooks/useOnHover';
 import useToggleAnimation from '../hooks/useToggleAnimation';
 import useOnChangeCssVariablesEffect from './hooks/useOnChangeCssVariablesEffect'
 
