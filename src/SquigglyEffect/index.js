@@ -1,11 +1,14 @@
 import React, {useRef, memo} from 'react';
 import PropTypes from 'prop-types';
 
+import useToggleAnimation from '../hooks/useToggleAnimation';
 import useOnChangeCssVariablesEffect from './hooks/useOnChangeCssVariablesEffect'
 
 import SvgFilters from "./components/SvgFilters";
 
 import './style/index.css';
+
+const ID_EFFECT = 'squiggly__animation';
 
 function SquigglyEffect({
                             baseFrequency = 0.02,
