@@ -3,7 +3,7 @@
 [DEMO](https://sakalx.github.io/react-glitch-effect/)
  ________________________________________________________
  ________________________________________________________
-
+// TEST commit author
 ## Clip Glitch Component
 `import GlitchClip from 'react-glitch-effect/core/Clip';`
 
