@@ -4,16 +4,8 @@
     "es6": true,
     "node": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
-  ],
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2018
-  },
+  "extends": ["airbnb", "plugin:react-hooks/recommended"],
+  "parser": "babel-eslint",
   "settings": {
     "react": {
       "version": "detect"
@@ -29,6 +21,8 @@
     "no-else-return": ["error", {"allowElseIf": false}],
     "no-lonely-if": "error",
     "no-dupe-else-if": "error",
-    "max-params": ["error", 3]
+    "max-params": ["error", 3],
+    "import/extensions": "off",
+    "react/require-default-props": "off"
   }
 }
