@@ -1,9 +1,9 @@
-#squiggly__animation {
+#glitch-squiggly__animation {
     --speed: 340ms;
     --iteration-count: infinite;
 
-    -webkit-animation-name: squiggly-effect;
-    animation-name: squiggly-effect;
+    -webkit-animation-name: glitch-squiggly__effect;
+    animation-name: glitch-squiggly__effect;
 
     -webkit-animation-duration: var(--speed);
     animation-duration: var(--speed);
@@ -15,12 +15,12 @@
     animation-iteration-count: var(--iteration-count);
 }
 
-#squiggly__svg-filters {
+#glitch-squiggly__svg-filters {
     height: 0;
     width: 0;
 }
 
-@-webkit-keyframes squiggly-effect {
+@-webkit-keyframes glitch-squiggly__effect {
     0% {
         -webkit-filter: url('#squiggly__filter-0');
         filter: url('#squiggly__filter-0');
@@ -43,7 +43,7 @@
     }
 }
 
-@keyframes squiggly-effect {
+@keyframes glitch-squiggly__effect {
     0% {
         -webkit-filter: url('#squiggly__filter-0');
         filter: url('#squiggly__filter-0');

@@ -1,65 +1,66 @@
-import React, {useState} from 'react';
-import {render} from 'react-dom';
+import React, { useState } from 'react';
+import { render } from 'react-dom';
 import GlitchClipEffect from '../../src/Clip';
 import GlitchText from '../../src/Text';
-import SquigglyEffect from '../../src/SquigglyEffect';
+import Squiggly from '../../src/Squiggly';
 
 import style from './style';
 
 const App = () => {
-  const [isDisabledGlitch, setDisabledGlitch] = useState({
-    main: false,
-    text: false,
-  });
+	const [isDisabledGlitch, setDisabledGlitch] = useState({
+		main: false,
+		text: false,
+	});
 
-  const handleToggleGlitch = name => () => {
-    setDisabledGlitch(pre => ({...pre, [name]: !isDisabledGlitch[name]}));
-  };
+	const handleToggleGlitch = name => () => {
+		setDisabledGlitch(pre => ({ ...pre, [name]: !isDisabledGlitch[name] }));
+	};
 
-  const [speed, setSpeed] = useState(340);
-  const [baseFrequency, setBaseFrequency] = useState(0.02);
-  const [scaleNoise, setScaleNoise] = useState(5);
-  const [isDisabled, setIsDisabled] = useState(false);
+	const [speed, setSpeed] = useState(340);
+	const [baseFrequency, setBaseFrequency] = useState(0.02);
+	const [scaleNoise, setScaleNoise] = useState(5);
+	const [isDisabled, setIsDisabled] = useState(false);
 
-  const foo = () => {
-      const newValue = speed + 10;
-      setSpeed(newValue)
-  };
-  const bar = () => {
-      const newValue = baseFrequency + 0.1;
-      setBaseFrequency(newValue)
-  };
-  const baz = () => {
-      const newValue = scaleNoise + 0.5;
-      setScaleNoise(newValue)
-  };
+	const foo = () => {
+		const newValue = speed + 10;
+		setSpeed(newValue);
+	};
+	const bar = () => {
+		const newValue = baseFrequency + 0.1;
+		setBaseFrequency(newValue);
+	};
+	const baz = () => {
+		const newValue = scaleNoise + 0.5;
+		setScaleNoise(newValue);
+	};
 
-  const reset = () => {
-      setSpeed(0.1);
-      setBaseFrequency(0.02);
-      setScaleNoise(5);
-  }
+	const reset = () => {
+		setSpeed(0.1);
+		setBaseFrequency(0.02);
+		setScaleNoise(5);
+	};
 
-  return (
-      <main style={style.wrap}>
-          <button onClick={reset}>RESET</button>
-          <button onClick={foo}>Slow down Speed</button>
-          <button onClick={bar}>Increase scaleNoise</button>
-          <button onClick={baz}>Increase baseFrequency</button>
-          <button onClick={() => setIsDisabled(!isDisabled)}>Toggle Animation</button>
+	return (
+		<main style={style.wrap}>
+			<button onClick={reset}>RESET</button>
+			<button onClick={foo}>Slow down Speed</button>
+			<button onClick={bar}>Increase scaleNoise</button>
+			<button onClick={baz}>Increase baseFrequency</button>
+			<button onClick={() => setIsDisabled(!isDisabled)}>Toggle Animation</button>
 
+			<Squiggly disabled={isDisabled} speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
+				<h1 style={{ color: 'black' }}>hello</h1>
+			</Squiggly>
+			<h2 style={{ color: 'black' }}>hello</h2>
+			<Squiggly onHover={true} speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
+				<img
+					style={style.portrait__img}
+					alt='Image with glitch effect when hoover'
+					src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg'
+				/>
+			</Squiggly>
 
-          <SquigglyEffect disabled={isDisabled} speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
-              <h1 style={{color: 'black'}}>hello</h1>
-          </SquigglyEffect>
-          <h2 style={{color: 'black'}}>hello</h2>
-          <SquigglyEffect onHover={true} speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
-              <img style={style.portrait__img}
-                   alt='Image with glitch effect when hoover'
-                   src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg'/>
-          </SquigglyEffect>
-
-{/*
+			{/*
         <GlitchClipEffect disabled={isDisabledGlitch.main} style={style.wallpaper}>
           <img style={style.wallpaper__img}
                alt='Background image with glitch effect'
@@ -99,8 +100,8 @@ const App = () => {
             </figure>
           </GlitchClipEffect>
         </section>*/}
-      </main>
-  );
+		</main>
+	);
 };
 
-render(<App/>, document.getElementById('root'));
+render(<App />, document.getElementById('root'));

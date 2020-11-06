@@ -33,7 +33,8 @@ export default {
   portrait__title: {
     fontSize: 34,
     fontWeight: 500,
-    textShadow: '-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)',
+    textShadow:
+      '-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)',
   },
   button__toggle: {
     letterSpacing: 2,
@@ -45,7 +46,8 @@ export default {
     margin: 12,
     outline: 'none',
     padding: 6,
-    textShadow: '-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)',
+    textShadow:
+      '-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)',
     width: 135,
   },
-};
+}
