@@ -10,7 +10,8 @@
     "deploy": "gh-pages -d example/dist",
     "publish-demo": "npm run build && npm run deploy",
     "prepublishOnly": "npm run transpile",
-    "publish": "npm publish"
+    "publish": "npm publish",
+    "lint": "eslint --fix . && echo 'Lint complete.'"
   },
   "repository": {
     "type": "git",
@@ -46,8 +47,14 @@
     "@babel/runtime": "^7.12.5",
     "babel-loader": "^8.1.0",
     "css-loader": "^5.0.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "prettier": "^2.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "style-loader": "^2.0.0",

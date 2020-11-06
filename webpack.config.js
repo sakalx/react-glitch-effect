@@ -1,11 +1,11 @@
-const path = require('path');
+const path = require('path')
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'example/src/index.html'),
-  filename: './index.html'
-});
+  filename: './index.html',
+})
 
 module.exports = {
   devtool: 'cheap-source-map',
@@ -14,7 +14,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'example/dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
 
   module: {
@@ -22,17 +22,17 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
 
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
 
   devServer: {
@@ -42,4 +42,4 @@ module.exports = {
   },
 
   plugins: [htmlWebpackPlugin],
-};
+}
