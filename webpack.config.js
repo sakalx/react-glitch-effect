@@ -33,6 +33,10 @@ module.exports = {
 
 	resolve: {
 		extensions: ['.js', '.jsx'],
+		alias: {
+			root: path.resolve(__dirname, 'src'),
+			core: path.resolve(__dirname, 'src/__core__'),
+		},
 	},
 
 	devServer: {

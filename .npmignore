@@ -7,6 +7,4 @@ example
 .eslintignore
 .eslintrc
 .gitignore
-.prettierignore
-.prettierrc
 webpack.config.js
