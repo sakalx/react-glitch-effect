@@ -33,6 +33,9 @@ module.exports = {
 
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      core: path.resolve(__dirname, 'src/__core__'),
+    },
   },
 
   devServer: {

@@ -8,6 +8,13 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["core", "./src/__core__"]
+        ]
+      }
     }
   },
   "rules": {
@@ -15,6 +22,11 @@
     "linebreak-style": ["error", "unix"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": ["error", {
+      "html": "ignore",
+      "custom": "ignore",
+      "exceptions": [""]
+    }]
   }
 }
