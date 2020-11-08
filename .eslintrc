@@ -1,10 +1,9 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
-    "node": true
+    "es6": true
   },
-  "extends": ["airbnb", "plugin:react-hooks/recommended"],
+  "extends": ["airbnb", "airbnb/hooks"],
   "parser": "babel-eslint",
   "settings": {
     "react": {
@@ -12,17 +11,10 @@
     }
   },
   "rules": {
+    "max-len": ["error", { "code": 120 }],
     "linebreak-style": ["error", "unix"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "no-param-reassign": "error",
-    "arrow-body-style": "error",
-    "no-nested-ternary": "error",
-    "no-else-return": ["error", {"allowElseIf": false}],
-    "no-lonely-if": "error",
-    "no-dupe-else-if": "error",
-    "max-params": ["error", 3],
-    "import/extensions": "off",
     "react/require-default-props": "off"
   }
 }

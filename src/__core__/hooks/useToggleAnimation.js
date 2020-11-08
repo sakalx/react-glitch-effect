@@ -1,21 +1,14 @@
-import React, {useCallback} from 'react';
+import { useCallback } from 'react';
 
-import {addAttribute, removeAttribute} from '../utils/HTML_API/toggleAttribute';
+import { addAttribute, removeAttribute } from '../utils/HTML_API/toggleAttribute';
 
 const addIdAttribute = addAttribute('id');
 const removeIdAttribute = removeAttribute('id');
 
-export default ({ref, id}) => {
-    const addAnimation = useCallback(() => {
-        addIdAttribute(ref)(id);
-    }, []);
+export default ({ ref, id }) => {
+  const add = useCallback(() => addIdAttribute(ref)(id), []);
 
-    const removeAnimation = useCallback(() => {
-        removeIdAttribute(ref)();
-    }, []);
+  const remove = useCallback(() => removeIdAttribute(ref)(), []);
 
-    return ({
-        addAnimation,
-        removeAnimation,
-    });
+  return ({ add, remove });
 };

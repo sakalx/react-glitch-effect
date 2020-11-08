@@ -1,1 +1,1 @@
-export default (...callbacks) => initValue => callbacks.reduce((value, callback) => callback(value), initValue);
+export default (...callbacks) => (initValue) => callbacks.reduce((value, callback) => callback(value), initValue);

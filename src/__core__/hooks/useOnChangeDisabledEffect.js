@@ -1,8 +1,10 @@
-import React, {useLayoutEffect} from 'react';
+import { useLayoutEffect } from 'react';
 
-export default (toggleAnimation, {disabled, onHover}) => {
-    useLayoutEffect(() => {
-        const isAnimationEnabled = !disabled && !onHover;
-        isAnimationEnabled ? toggleAnimation.addAnimation() : toggleAnimation.removeAnimation();
-    }, [disabled, onHover]);
+export default (toggleAnimation, { disabled, onHover }) => {
+  useLayoutEffect(() => {
+    const isAnimationEnabled = !disabled && !onHover;
+
+    if (isAnimationEnabled) toggleAnimation.add();
+    else toggleAnimation.remove();
+  }, [disabled, onHover]);
 };
