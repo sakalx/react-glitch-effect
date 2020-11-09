@@ -1,6 +1,6 @@
 export default (checkList = []) => (value) => {
-  const typeValue = typeof (value);
-  const isValidType = (type) => typeValue === type;
+  const valueType = typeof (value);
+  const isValidType = (type) => valueType === type;
 
-  return checkList?.every(isValidType);
+  return checkList?.some(isValidType);
 };

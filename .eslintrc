@@ -12,7 +12,8 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["core", "./src/__core__"]
+          ["core", "./src/__core__"],
+          ["src", "./src"]
         ]
       }
     }
