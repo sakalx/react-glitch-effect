@@ -1,10 +1,10 @@
 import React, { useRef, memo } from 'react';
 import PropTypes from 'prop-types';
 
-import useOnChangeCssVarEffect from '../__core__/hooks/useOnChangeCssVarEffect';
-import useOnChangeDisabledEffect from '../__core__/hooks/useOnChangeDisabledEffect';
-import useOnHover from '../__core__/hooks/useOnHover';
-import useToggleAnimation from '../__core__/hooks/useToggleAnimation';
+import useOnChangeCssVarEffect from 'core/hooks/useOnChangeCssVarEffect';
+import useOnChangeDisabledEffect from 'core/hooks/useOnChangeDisabledEffect';
+import useOnHover from 'core/hooks/useOnHover';
+import useToggleAnimation from 'core/hooks/useToggleAnimation';
 
 import SvgFilters from './components/SvgFilters';
 
@@ -12,7 +12,7 @@ import './style/index.css';
 
 const ID_EFFECT = 'glitch-squiggly__animation';
 
-const SquigglyEffect = ({
+const SquigglyGlitch = ({
   baseFrequency = 0.02,
   children,
   disabled = false,
@@ -40,8 +40,8 @@ const SquigglyEffect = ({
   useOnChangeCssVarEffect({
     ref: squigglyAnimationRef,
     cssVariables: [
-      { '--speed': speed },
-      { '--iteration-count': iterationCount },
+      ['--speed', `${speed}ms`],
+      ['--iteration-count', iterationCount],
     ],
   });
 
@@ -51,15 +51,15 @@ const SquigglyEffect = ({
     <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave} {...rest}>
       <div ref={squigglyAnimationRef}>
         {children}
-        <SvgFilters foo="3" baseFrequency={baseFrequency} scaleNoise={scaleNoise} />
+        <SvgFilters baseFrequency={baseFrequency} scaleNoise={scaleNoise} />
       </div>
     </div>
   );
 };
 
-export default memo(SquigglyEffect);
+export default memo(SquigglyGlitch);
 
-SquigglyEffect.propTypes = {
+SquigglyGlitch.propTypes = {
   baseFrequency: PropTypes.number,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,

@@ -1,7 +1,7 @@
 import React, { useCallback, memo } from 'react';
 import PropTypes from 'prop-types';
 
-const FILTERS = [0, 1, 2, 3, 4];
+const COUNT_OF_FILTERS = [0, 1, 2, 3, 4];
 
 const SvgFilters = ({ baseFrequency, scaleNoise }) => {
   const renderFilter = useCallback((i) => (
@@ -22,9 +22,9 @@ const SvgFilters = ({ baseFrequency, scaleNoise }) => {
   ), [baseFrequency, scaleNoise]);
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="squiggly__svg-filters">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="glitch-squiggly__svg-filters">
       <defs>
-        {FILTERS.map(renderFilter)}
+        {COUNT_OF_FILTERS.map(renderFilter)}
       </defs>
     </svg>
   );

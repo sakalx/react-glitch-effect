@@ -1,21 +1,22 @@
-.glitch-variables {
-    --duration-effect: 3s;
-    --gap-horizontal: 10px;
+#glitch-clip__animation {
+    --speed: 3000ms;
+    --gap-horizontal: 5px;
     --iteration-count: infinite;
-}
 
-.glitch {
-    -webkit-animation-name: glitch-effect;
-    animation-name: glitch-effect;
-    -webkit-animation-duration:  var(--duration-effect);
-    animation-duration:  var(--duration-effect);
+    -webkit-animation-name: glitch-clip__effect;
+    animation-name: glitch-clip__effect;
+
+    -webkit-animation-duration: var(--speed);
+    animation-duration: var(--speed);
+
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
+
     -webkit-animation-iteration-count: var(--iteration-count);
     animation-iteration-count: var(--iteration-count);
 }
 
-@-webkit-keyframes glitch-effect {
+@-webkit-keyframes glitch-clip__effect {
     0% {
         -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
         transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
@@ -62,7 +63,7 @@
     }
 }
 
-@keyframes glitch-effect {
+@keyframes glitch-clip__effect {
     0% {
         -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
         transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
