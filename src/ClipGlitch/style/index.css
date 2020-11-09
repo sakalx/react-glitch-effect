@@ -1,13 +1,11 @@
 #glitch-clip__animation {
-    --speed: 3000ms;
     --gap-horizontal: 5px;
-    --iteration-count: infinite;
 
     -webkit-animation-name: glitch-clip__effect;
     animation-name: glitch-clip__effect;
 
-    -webkit-animation-duration: var(--speed);
-    animation-duration: var(--speed);
+    -webkit-animation-duration: var(--duration);
+    animation-duration: var(--duration);
 
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;

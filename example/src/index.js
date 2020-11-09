@@ -17,14 +17,14 @@ const App = () => {
     setDisabledGlitch((pre) => ({ ...pre, [name]: !isDisabledGlitch[name] }));
   };
 
-  const [speed, setSpeed] = useState(340);
+  const [speed, setSpeed] = useState(3000);
   const [baseFrequency, setBaseFrequency] = useState(0.02);
   const [scaleNoise, setScaleNoise] = useState(5);
   const [isDisabled, setIsDisabled] = useState(false);
 
   const foo = () => {
     const newValue = speed + 100;
-    setSpeed(newValue);
+    setSpeed(null);
   };
   const bar = () => {
     const newValue = baseFrequency + 0.1;
@@ -49,9 +49,9 @@ const App = () => {
       <button onClick={baz}>Increase baseFrequency</button>
       <button onClick={() => setIsDisabled(!isDisabled)}>Toggle Animation</button>
 
-      <SquigglyGlitch disabled={isDisabled} speed={speed} baseFrequency={baseFrequency} scaleNoise={scaleNoise}>
+      <ClipGlitch disabled={isDisabled} duration={speed}>
         <h1 style={{ color: 'black' }}>hello</h1>
-      </SquigglyGlitch>
+      </ClipGlitch>
       <h2 style={{ color: 'black' }}>hello</h2>
       <ClipGlitch onHover>
         <img

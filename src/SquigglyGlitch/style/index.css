@@ -1,12 +1,9 @@
 #glitch-squiggly__animation {
-    --speed: 340ms;
-    --iteration-count: infinite;
-
     -webkit-animation-name: glitch-squiggly__effect;
     animation-name: glitch-squiggly__effect;
 
-    -webkit-animation-duration: var(--speed);
-    animation-duration: var(--speed);
+    -webkit-animation-duration: var(--duration);
+    animation-duration: var(--duration);
 
     -webkit-animation-timing-function: cubic-bezier(.57,.21,.69,3.25);
     animation-timing-function: cubic-bezier(.57,.21,.69,3.25);

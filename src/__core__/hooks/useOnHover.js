@@ -1,13 +1,9 @@
 import { useCallback } from 'react';
 
-import checkType from '../utils/generic/checkType';
-
-const isValidFunction = checkType(['function']);
-
 export default ({ callbackEvents, onHover, toggleAnimation }) => {
   const handleOnMouseEnter = useCallback(
     (e) => {
-      const isOnMouseEnter = isValidFunction(callbackEvents.onMouseEnter);
+      const isOnMouseEnter = typeof callbackEvents.onMouseEnter === 'function';
 
       if (isOnMouseEnter) callbackEvents.onMouseEnter(e);
       if (onHover) toggleAnimation.add();
@@ -19,7 +15,7 @@ export default ({ callbackEvents, onHover, toggleAnimation }) => {
 
   const handleOnMouseLeave = useCallback(
     (e) => {
-      const isOnMouseLeave = isValidFunction(callbackEvents.onMouseLeave);
+      const isOnMouseLeave = typeof callbackEvents.onMouseEnter === 'function';
 
       if (isOnMouseLeave) callbackEvents.onMouseLeave(e);
       if (onHover) toggleAnimation.remove();
