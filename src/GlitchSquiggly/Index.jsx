@@ -6,9 +6,9 @@ import SvgFilters from './components/SvgFilters';
 
 import './style/index.css';
 
-const ID_ANIMATION_EFFECT = 'glitch-squiggly__animation';
+const ID_ANIMATION_EFFECT = 'glitch-squiggly';
 
-const SquigglyGlitch = ({
+const GlitchSquiggly = ({
   baseFrequency = 0.02,
   children,
   duration = 340,
@@ -21,9 +21,9 @@ const SquigglyGlitch = ({
   </GlitchBase>
 );
 
-export default memo(SquigglyGlitch);
+export default memo(GlitchSquiggly);
 
-SquigglyGlitch.propTypes = {
+GlitchSquiggly.propTypes = {
   baseFrequency: PropTypes.number,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,

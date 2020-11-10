@@ -3,6 +3,7 @@ export default {
     alignItems: 'flex-start',
     display: 'flex',
     flexDirection: 'column',
+    // background: 'black',
   },
   row: {
     display: 'flex',
@@ -19,6 +20,7 @@ export default {
     width: '98.5vw',
   },
   title: {
+    color: 'black',
     alignSelf: 'center',
     fontSize: 34,
     margin: 0,
@@ -50,4 +52,4 @@ export default {
       '-1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)',
     width: 135,
   },
-}
+};

@@ -1,8 +1,8 @@
-#glitch-clip__animation {
+[data-animation='glitch-clip'] {
     --gap-horizontal: 5px;
 
-    -webkit-animation-name: glitch-clip__effect;
-    animation-name: glitch-clip__effect;
+    -webkit-animation-name: glitch-clip__animation;
+    animation-name: glitch-clip__animation;
 
     -webkit-animation-duration: var(--duration);
     animation-duration: var(--duration);
@@ -14,7 +14,7 @@
     animation-iteration-count: var(--iteration-count);
 }
 
-@-webkit-keyframes glitch-clip__effect {
+@-webkit-keyframes glitch-clip__animation {
     0% {
         -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
         transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
@@ -61,7 +61,7 @@
     }
 }
 
-@keyframes glitch-clip__effect {
+@keyframes glitch-clip__animation {
     0% {
         -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);
         transform: translate3d(calc(-1 * var(--gap-horizontal)),0,0) scale3d(-1,-1,1);

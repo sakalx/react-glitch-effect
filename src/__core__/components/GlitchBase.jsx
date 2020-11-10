@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 const GlitchBase = ({
   children,
   disabled = false,
-  duration,
+  duration = 1000,
   idAnimation,
   iterationCount = 'infinite',
   onHover = false,

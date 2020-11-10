@@ -5,9 +5,9 @@ import GlitchBase from 'core/components/GlitchBase';
 
 import './style/index.css';
 
-const ID_ANIMATION_EFFECT = 'glitch-clip__animation';
+const ID_ANIMATION_EFFECT = 'glitch-clip';
 
-const ClipGlitch = ({
+const GlitchClip = ({
   children,
   duration = 3000,
   ...rest
@@ -17,9 +17,9 @@ const ClipGlitch = ({
   </GlitchBase>
 );
 
-export default memo(ClipGlitch);
+export default memo(GlitchClip);
 
-ClipGlitch.propTypes = {
+GlitchClip.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   duration: PropTypes.number,

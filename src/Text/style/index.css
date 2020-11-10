@@ -1,22 +1,21 @@
-._s-glitch-text-variables {
+[data-animation='glitch-text'] {
   --_s-color-text-effect-1: rgba(77, 171, 245, .5);
   --_s-color-text-effect-2: rgba(245, 0, 87, .3);
-  --_s-duration-text-effect: 2s;
-  --_s-iteration-text-effect-count: infinite;
-}
 
-._s-glitch-text {
-  -webkit-animation-name: _s-glitch-text-effect;
-  animation-name: _s-glitch-text-effect;
-  -webkit-animation-duration: var(--_s-duration-text-effect);
-  animation-duration: var(--_s-duration-text-effect);
+  -webkit-animation-name: glitch-text__animation;
+  animation-name: glitch-text__animation;
+
+  -webkit-animation-duration: var(--duration);
+  animation-duration: var(--duration);
+
   -webkit-animation-timing-function: cubic-bezier(.32,2,.55,.27);
   animation-timing-function: cubic-bezier(.32,2,.55,.27);
-  -webkit-animation-iteration-count: var(--_s-iteration-text-effect-count);
-  animation-iteration-count: var(--_s-iteration-text-effect-count);
+
+  -webkit-animation-iteration-count: var(--iteration-count);
+  animation-iteration-count: var(--iteration-count);
 }
 
-@-webkit-keyframes _s-glitch-text-effect {
+@-webkit-keyframes glitch-text__animation {
   0% {
     text-shadow: 0.4389924193300864px 0 1px var(--_s-color-text-effect-1), -0.4389924193300864px 0 1px var(--_s-color-text-effect-2), 0 0 3px;
   }

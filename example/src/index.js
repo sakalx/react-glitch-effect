@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 
-import ClipGlitch from 'src/ClipGlitch';
-import SquigglyGlitch from 'src/SquigglyGlitch';
+// import ClipGlitch from 'src/ClipGlitch';
+// import SquigglyGlitch from 'src/SquigglyGlitch';
+import Magic from 'src/Text/Index.jsx';
 
 import style from './style';
 
@@ -49,17 +50,28 @@ const App = () => {
       <button onClick={baz}>Increase baseFrequency</button>
       <button onClick={() => setIsDisabled(!isDisabled)}>Toggle Animation</button>
 
-      <ClipGlitch disabled={isDisabled} duration={speed}>
-        <h1 style={{ color: 'black' }}>hello</h1>
-      </ClipGlitch>
-      <h2 style={{ color: 'black' }}>hello</h2>
-      <ClipGlitch onHover>
-        <img
-          style={style.portrait__img}
-          alt="Image with glitch effect when hoover"
-          src="https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg"
-        />
-      </ClipGlitch>
+      {/* <ClipGlitch disabled={isDisabled} duration={speed}> */}
+      {/*  <h1 style={{ color: 'black' }}>hello</h1> */}
+      {/* </ClipGlitch> */}
+      {/* <h2 style={{ color: 'black' }}>hello</h2> */}
+      {/* <ClipGlitch onHover> */}
+      {/*  <img */}
+      {/*    style={style.portrait__img} */}
+      {/*    alt="Image with glitch effect when hoover" */}
+      {/*    src="https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg" */}
+      {/*  /> */}
+      {/* </ClipGlitch> */}
+
+      <Magic component="aside" style={style.title}>
+        <div>
+          <h5>hello</h5>
+          <p> Hover this text</p>
+
+        </div>
+      </Magic>
+      <Magic color1="red">
+        Boo
+      </Magic>
 
       {/*
         <GlitchClipEffect disabled={isDisabledGlitch.main} style={style.wallpaper}>
@@ -85,22 +97,24 @@ const App = () => {
         <GlitchClipEffect disabled={isDisabledGlitch.main} duration='1s' style={style.title}>
           <h1 style={{margin: 24}}>Glitch</h1>
         </GlitchClipEffect>
-
-        <section style={style.row}>
-          <GlitchText onHover={true} component='h5' style={style.title}>
-            Hover this text
-          </GlitchText>
-          <GlitchClipEffect onHover={true}>
-            <figure>
-              <figcaption style={style.portrait__title}>
-                Hover me
-              </figcaption>
-              <img style={style.portrait__img}
-                   alt='Image with glitch effect when hoover'
-                   src='https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg'/>
-            </figure>
-          </GlitchClipEffect>
-        </section> */}
+*/}
+      {/* <section style={style.row}> */}
+      {/*  <GlitchText onHover component="h5" style={style.title}> */}
+      {/*    Hover this text */}
+      {/*  </GlitchText> */}
+      {/* <GlitchClipEffect onHover> */}
+      {/*  <figure> */}
+      {/*    <figcaption style={style.portrait__title}> */}
+      {/*      Hover me */}
+      {/*    </figcaption> */}
+      {/*    <img */}
+      {/*      style={style.portrait__img} */}
+      {/*      alt="Image with glitch effect when hoover" */}
+      {/*      src="https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg" */}
+      {/*    /> */}
+      {/*  </figure> */}
+      {/* </GlitchClipEffect> */}
+      {/* </section> */}
     </main>
   );
 };

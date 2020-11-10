@@ -22,7 +22,7 @@ const SvgFilters = ({ baseFrequency, scaleNoise }) => {
   ), [baseFrequency, scaleNoise]);
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="glitch-squiggly__svg-filters">
+    <svg className="glitch-squiggly__svg-filters" xmlns="http://www.w3.org/2000/svg" version="1.1">
       <defs>
         {COUNT_OF_FILTERS.map(renderFilter)}
       </defs>
