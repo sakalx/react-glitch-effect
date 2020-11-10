@@ -6,7 +6,7 @@ import SvgFilters from './components/SvgFilters';
 
 import './style/index.css';
 
-const ID_ANIMATION_EFFECT = 'glitch-squiggly';
+const GLITCH_ID = 'glitch-squiggly';
 
 const GlitchSquiggly = ({
   baseFrequency = 0.02,
@@ -15,7 +15,7 @@ const GlitchSquiggly = ({
   scaleNoise = 5,
   ...rest
 }) => (
-  <GlitchBase duration={duration} idAnimation={ID_ANIMATION_EFFECT} {...rest}>
+  <GlitchBase duration={duration} glitchId={GLITCH_ID} {...rest}>
     {children}
     <SvgFilters baseFrequency={baseFrequency} scaleNoise={scaleNoise} />
   </GlitchBase>

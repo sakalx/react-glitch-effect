@@ -1,11 +1,11 @@
-import React, { useLayoutEffect, createElement, memo } from 'react';
+import React, { createElement, memo } from 'react';
 import PropTypes from 'prop-types';
 
 import GlitchBase from 'core/components/GlitchBase';
 
 import './style/index.css';
 
-const ID_ANIMATION_EFFECT = 'glitch-text';
+const GLITCH_ID = 'glitch-text';
 
 const GlitchText = ({
   children,
@@ -14,35 +14,19 @@ const GlitchText = ({
   duration = 2000,
   component = 'span',
   ...rest
-}) => {
-  console.log(33333);
-
-  useLayoutEffect(() => {
-    const foo = document.getElementById(ID_ANIMATION_EFFECT);
-
-    foo?.style.setProperty('--_s-color-text-effect-1', color1);
-
-    console.log(foo);
-  }, [color1]);
-
-  return (
-    <GlitchBase duration={duration} idAnimation={ID_ANIMATION_EFFECT} {...rest}>
-      {createElement(component, null, children)}
-    </GlitchBase>
-  );
-};
-//   --_s-color-text-effect-1: rgba(77, 171, 245, .5);
-//   --_s-color-text-effect-2: rgba(245, 0, 87, .3);
-
-// useLayoutEffect(() => {
-//   ref.current?.style.setProperty(key, value);
-// }, [color1]);
-//
-// useLayoutEffect(() => {
-//   cssVarList.forEach(([key, value]) => {
-//     ref.current?.style.setProperty(key, value);
-//   });
-// }, [color2]);
+}) => (
+  <GlitchBase
+    duration={duration}
+    glitchId={GLITCH_ID}
+    restCssVarList={JSON.stringify([
+      ['--text-shadow-color-1', color1],
+      ['--text-shadow-color-2', color2],
+    ])}
+    {...rest}
+  >
+    {createElement(component, null, children)}
+  </GlitchBase>
+);
 
 export default memo(GlitchText);
 

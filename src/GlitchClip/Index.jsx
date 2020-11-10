@@ -5,14 +5,14 @@ import GlitchBase from 'core/components/GlitchBase';
 
 import './style/index.css';
 
-const ID_ANIMATION_EFFECT = 'glitch-clip';
+const GLITCH_ID = 'glitch-clip';
 
 const GlitchClip = ({
   children,
   duration = 3000,
   ...rest
 }) => (
-  <GlitchBase duration={duration} idAnimation={ID_ANIMATION_EFFECT} {...rest}>
+  <GlitchBase duration={duration} glitchId={GLITCH_ID} {...rest}>
     {children}
   </GlitchBase>
 );

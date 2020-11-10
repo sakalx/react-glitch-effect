@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 
-export default ({ ref, id }) => {
+export default (ref, glitchId) => {
   const add = useCallback(() => {
-    ref.current?.setAttribute('data-animation', id);
+    ref.current?.setAttribute('data-animation', glitchId);
     return ref;
   }, []);
 
