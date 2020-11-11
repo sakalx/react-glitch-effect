@@ -1,3 +1,6 @@
+Getting Started
+npm install gh-pages --save-dev
+
 # React glitch-effect-components
  ________________________________________________________
 [DEMO](https://sakalx.github.io/react-glitch-effect/)
