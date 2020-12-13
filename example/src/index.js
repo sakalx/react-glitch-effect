@@ -1,11 +1,12 @@
 /* eslint import/no-unresolved: 0 */
 import React, { useState } from 'react';
 import { render } from 'react-dom';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-// import ClipGlitch from 'src/ClipGlitch';
-// import SquigglyGlitch from 'src/SquigglyGlitch';
-import Magic from 'src/Text/Index.jsx';
-
+import VerticalTabs from './components/Navigation/Index';
+import AppBar from './components/AppBar/Index';
+import GlitchSquiggly from '../../src/GlitchSquiggly/Index';
 import style from './style';
 
 const App = () => {
@@ -43,35 +44,41 @@ const App = () => {
   };
 
   return (
-    <main style={style.wrap}>
+    <main>
+      <CssBaseline />
+      <AppBar />
+      <VerticalTabs />
+      {/*     <Button variant="contained" color="primary">
+        Hello World
+      </Button>
       <button onClick={reset}>RESET</button>
       <button onClick={foo}>Slow down Speed</button>
       <button onClick={bar}>Increase scaleNoise</button>
       <button onClick={baz}>Increase baseFrequency</button>
       <button onClick={() => setIsDisabled(!isDisabled)}>Toggle Animation</button>
 
-      {/* <ClipGlitch disabled={isDisabled} duration={speed}> */}
-      {/*  <h1 style={{ color: 'black' }}>hello</h1> */}
-      {/* </ClipGlitch> */}
-      {/* <h2 style={{ color: 'black' }}>hello</h2> */}
-      {/* <ClipGlitch onHover> */}
-      {/*  <img */}
-      {/*    style={style.portrait__img} */}
-      {/*    alt="Image with glitch effect when hoover" */}
-      {/*    src="https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg" */}
-      {/*  /> */}
-      {/* </ClipGlitch> */}
+      <GlitchSquiggly disabled={isDisabled} duration={speed}>
+        <h1 style={{ color: 'black' }}>hello</h1>
+      </GlitchSquiggly>
+      <h2 style={{ color: 'black' }}>hello</h2>
+      <GlitchSquiggly onHover>
+        <img
+          style={style.portrait__img}
+          alt="Image with glitch effect when hoover"
+          src="https://raw.githubusercontent.com/sakalx/react-glitch-effect/master/example/src/static/img/secondary.jpg"
+        />
+      </GlitchSquiggly> */}
 
-      <Magic component="aside" style={style.title}>
-        <div>
-          <h5>hello</h5>
-          <p> Hover this text</p>
+      {/* <Magic component="aside" style={style.title}> */}
+      {/*  <div> */}
+      {/*    <h5>hello</h5> */}
+      {/*    <p> Hover this text</p> */}
 
-        </div>
-      </Magic>
-      <Magic color1="red">
-        Boo
-      </Magic>
+      {/*  </div> */}
+      {/* </Magic> */}
+      {/* <Magic color1="red"> */}
+      {/*  Boo */}
+      {/* </Magic> */}
 
       {/*
         <GlitchClipEffect disabled={isDisabledGlitch.main} style={style.wallpaper}>
