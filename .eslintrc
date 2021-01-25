@@ -20,6 +20,7 @@
     }
   },
   "rules": {
+    "import/no-extraneous-dependencies": 0,
     "max-len": ["error", { "code": 120 }],
     "linebreak-style": ["error", "unix"],
     "react-hooks/rules-of-hooks": "error",

@@ -23,10 +23,20 @@ module.exports = {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
         exclude: /node_modules/,
-      },
-      {
+      }, {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/,
+      }, {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'static/img/',
+          },
+        },
+        exclude: /node_modules/,
       },
     ],
   },
