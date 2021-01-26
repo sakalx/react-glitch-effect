@@ -16,7 +16,7 @@ const GlitchSquiggly = ({
   ...rest
 }) => (
   <GlitchBase duration={duration} glitchId={GLITCH_ID} {...rest}>
-    {children}
+    <>{children}</>
     <SvgFilters baseFrequency={baseFrequency} scaleNoise={scaleNoise} />
   </GlitchBase>
 );

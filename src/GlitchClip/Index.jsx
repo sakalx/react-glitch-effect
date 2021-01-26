@@ -13,7 +13,7 @@ const GlitchClip = ({
   ...rest
 }) => (
   <GlitchBase duration={duration} glitchId={GLITCH_ID} {...rest}>
-    {children}
+    <>{children}</>
   </GlitchBase>
 );
 

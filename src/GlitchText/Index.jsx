@@ -24,7 +24,7 @@ const GlitchText = ({
     ])}
     {...rest}
   >
-    {createElement(component, null, children)}
+    <>{createElement(component, null, children)}</>
   </GlitchBase>
 );
 

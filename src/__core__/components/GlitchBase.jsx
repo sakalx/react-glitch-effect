@@ -38,7 +38,9 @@ const GlitchBase = ({
   return (
     <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave} {...rest}>
       <div ref={glitchAnimationRef}>
-        {children}
+        {Array.isArray(children)
+          ? [children[0], React.cloneElement(children[1], { rootRef: glitchAnimationRef, key: 1 })]
+          : children}
       </div>
     </div>
   );

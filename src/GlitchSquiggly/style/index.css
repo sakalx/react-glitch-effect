@@ -1,4 +1,10 @@
 [data-animation='glitch-squiggly']{
+    --squiggly__filter--id-0: url('#squiggly__filter-0--0.02-5');
+    --squiggly__filter--id-1: url('#squiggly__filter-1--0.02-5');
+    --squiggly__filter--id-2: url('#squiggly__filter-2--0.02-5');
+    --squiggly__filter--id-3: url('#squiggly__filter-3--0.02-5');
+    --squiggly__filter--id-4: url('#squiggly__filter-4--0.02-5');
+
     -webkit-animation-name: glitch-squiggly__animation;
     animation-name: glitch-squiggly__animation;
 
@@ -19,46 +25,46 @@
 
 @-webkit-keyframes glitch-squiggly__animation {
     0% {
-        -webkit-filter: url('#squiggly__filter-0');
-        filter: url('#squiggly__filter-0');
+        -webkit-filter: var(--squiggly__filter--id-0);
+        filter: var(--squiggly__filter--id-0);
     }
     25% {
-        -webkit-filter: url('#squiggly__filter-1');
-        filter: url('#squiggly__filter-1');
+        -webkit-filter: var(--squiggly__filter--id-1);
+        filter: var(--squiggly__filter--id-1);
     }
     50% {
-        -webkit-filter: url('#squiggly__filter-2');
-        filter: url('#squiggly__filter-2');
+        -webkit-filter: var(--squiggly__filter--id-2);
+        filter: var(--squiggly__filter--id-2);
     }
     75% {
-        -webkit-filter: url('#squiggly__filter-3');
-        filter: url('#squiggly__filter-3');
+        -webkit-filter: var(--squiggly__filter--id-3);
+        filter: var(--squiggly__filter--id-3);
     }
     100% {
-        -webkit-filter: url('#squiggly__filter-4');
-        filter: url('#squiggly__filter-4');
+        -webkit-filter: var(--squiggly__filter--id-4);
+        filter: var(--squiggly__filter--id-4);
     }
 }
 
 @keyframes glitch-squiggly__animation {
     0% {
-        -webkit-filter: url('#squiggly__filter-0');
-        filter: url('#squiggly__filter-0');
+        -webkit-filter: var(--squiggly__filter--id-0);
+        filter: var(--squiggly__filter--id-0);
     }
     25% {
-        -webkit-filter: url('#squiggly__filter-1');
-        filter: url('#squiggly__filter-1');
+        -webkit-filter: var(--squiggly__filter--id-1);
+        filter: var(--squiggly__filter--id-1);
     }
     50% {
-        -webkit-filter: url('#squiggly__filter-2');
-        filter: url('#squiggly__filter-2');
+        -webkit-filter: var(--squiggly__filter--id-2);
+        filter: var(--squiggly__filter--id-2);
     }
     75% {
-        -webkit-filter: url('#squiggly__filter-3');
-        filter: url('#squiggly__filter-3');
+        -webkit-filter: var(--squiggly__filter--id-3);
+        filter: var(--squiggly__filter--id-3);
     }
     100% {
-        -webkit-filter: url('#squiggly__filter-4');
-        filter: url('#squiggly__filter-4');
+        -webkit-filter: var(--squiggly__filter--id-4);
+        filter: var(--squiggly__filter--id-4);
     }
 }

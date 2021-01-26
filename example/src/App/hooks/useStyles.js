@@ -19,7 +19,7 @@ export default makeStyles((theme) => ({
     minWidth: '120px',
   },
   paper: {
-    flex: '1',
+    flex: '1 1 500px',
     margin: '6px',
     padding: '6px 12px',
   },
@@ -27,9 +27,10 @@ export default makeStyles((theme) => ({
     position: 'relative',
   },
   exampleText: {
-    position: 'absolute',
     left: '12px',
+    position: 'absolute',
     top: '12px',
+    zIndex: '999',
   },
   exampleImg: {
     height: 'auto',
