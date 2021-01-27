@@ -20,6 +20,7 @@
     }
   },
   "rules": {
+    "react/forbid-prop-types" : 0,
     "import/no-extraneous-dependencies": 0,
     "max-len": ["error", { "code": 120 }],
     "linebreak-style": ["error", "unix"],

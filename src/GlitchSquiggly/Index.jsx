@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import GlitchBase from 'core/components/GlitchBase';
-import SvgFilters from './components/SvgFilters';
+import SvgFilters from './components/SvgFilters/Index';
 
 import './style/index.css';
 

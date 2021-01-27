@@ -15,9 +15,9 @@ import grootImg from '../../../static/img/groot.jpg';
 const SquigglyGlitchExample = () => {
   const classes = useStyles();
 
-  const [durationText, setDurationText] = useSliderValue(340);
+  const [durationText, setDurationText] = useSliderValue(160);
   const [baseFrequencyText, setBaseFrequencyText] = useSliderValue(0.02);
-  const [scaleNoiseText, setScaleNoiseText] = useSliderValue(5);
+  const [scaleNoiseText, setScaleNoiseText] = useSliderValue(17);
   const [disabledText, setDisabledText] = useSwitcherValue(false);
   const [onHoverText, setOnHoverText] = useSwitcherValue(false);
 
@@ -27,8 +27,6 @@ const SquigglyGlitchExample = () => {
   const [disabledImg, setDisabledImg] = useSwitcherValue(false);
   const [onHoverImg, setOnHoverImg] = useSwitcherValue(false);
 
-  console.log(scaleNoiseText);
-  console.log(scaleNoiseImg);
   return (
     <>
       <Paper className={classes.paper} elevation={3}>
@@ -88,7 +86,7 @@ const SquigglyGlitchExample = () => {
             disabled={disabledImg}
             duration={durationImg}
             onHover={onHoverImg}
-           // scaleNoise={scaleNoiseImg}
+            scaleNoise={scaleNoiseImg}
           >
             <img alt="img-glitch" className={classes.exampleImg} src={grootImg} />
           </GlitchSquiggly>

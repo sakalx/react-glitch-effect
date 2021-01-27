@@ -49,7 +49,7 @@ const PropsContainer = ({
 
       <fieldset className={classes.fieldset}>
         <Typography component="legend" color="textSecondary" variant="body1">
-          {`baseFrequency: ${duration}`}
+          {`baseFrequency: ${baseFrequency}`}
         </Typography>
         <Slider
           color="secondary"
