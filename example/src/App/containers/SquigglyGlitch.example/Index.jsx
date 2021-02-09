@@ -1,28 +1,29 @@
 import React, { memo } from 'react';
 
-import Divider from '@material-ui/core/Divider';
-import Paper from '@material-ui/core/Paper';
+import GlitchSquiggly from 'src/GlitchSquiggly/Index';
 
-import GlitchSquiggly from 'src/GlitchSquiggly';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+
+import grootImg from '../../../static/img/groot.jpg';
 import useSliderValue from '../../hooks/useSliderValue';
 import useSwitcherValue from '../../hooks/useSwitcherValue';
 import useStyles from '../../hooks/useStyles';
 
 import PropsContainer from './Props.container';
-import grootImg from '../../../static/img/groot.jpg';
+import CodeContainer from './Code.container';
 
 const SquigglyGlitchExample = () => {
   const classes = useStyles();
 
-  const [durationText, setDurationText] = useSliderValue(160);
+  const [durationText, setDurationText] = useSliderValue(820);
   const [baseFrequencyText, setBaseFrequencyText] = useSliderValue(0.02);
-  const [scaleNoiseText, setScaleNoiseText] = useSliderValue(17);
+  const [scaleNoiseText, setScaleNoiseText] = useSliderValue(9);
   const [disabledText, setDisabledText] = useSwitcherValue(false);
   const [onHoverText, setOnHoverText] = useSwitcherValue(false);
 
   const [durationImg, setDurationImg] = useSliderValue(430);
-  const [baseFrequencyImg, setBaseFrequencyImg] = useSliderValue(0.02);
+  const [baseFrequencyImg, setBaseFrequencyImg] = useSliderValue(0.2);
   const [scaleNoiseImg, setScaleNoiseImg] = useSliderValue(5);
   const [disabledImg, setDisabledImg] = useSwitcherValue(false);
   const [onHoverImg, setOnHoverImg] = useSwitcherValue(false);
@@ -44,10 +45,8 @@ const SquigglyGlitchExample = () => {
           setOnHove={setOnHoverText}
         />
         <br />
-        <Divider />
-        <br />
         <PropsContainer
-          title="props Glitch (image):"
+          title="props Glitch (background image):"
           duration={durationImg}
           setDuration={setDurationImg}
           baseFrequency={baseFrequencyImg}
@@ -59,6 +58,8 @@ const SquigglyGlitchExample = () => {
           onHover={onHoverImg}
           setOnHove={setOnHoverImg}
         />
+        <br />
+        <CodeContainer />
       </Paper>
 
       <Paper className={classes.paper} elevation={2}>

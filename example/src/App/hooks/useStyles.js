@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   root: {
     width: '100%',
     '& .MuiAccordionDetails-root': {
@@ -15,6 +15,7 @@ export default makeStyles((theme) => ({
   fieldset: {
     borderColor: 'inherit',
     borderRadius: '6px',
+    borderWidth: '1px',
     margin: '6px',
     minWidth: '120px',
   },
@@ -34,6 +35,9 @@ export default makeStyles((theme) => ({
   },
   exampleImg: {
     height: 'auto',
+    width: '100%',
+  },
+  fullWidth: {
     width: '100%',
   },
 }));

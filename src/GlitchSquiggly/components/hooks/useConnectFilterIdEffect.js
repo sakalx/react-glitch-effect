@@ -9,7 +9,6 @@ export default (COUNT_OF_FILTERS, {
   filterIds,
 }) => {
   useEffect(() => {
-    console.log('filterIds', filterIds);
     if (rootRef.current) COUNT_OF_FILTERS.forEach(setFilterIdProperty(rootRef, filterIds));
   }, [filterIds]);
 };

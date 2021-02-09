@@ -68,6 +68,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react-syntax-highlighter": "^15.4.3"
   }
 }
