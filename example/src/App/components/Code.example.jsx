@@ -1,3 +1,4 @@
+/* eslint react/prop-types: 0 */
 import React, { memo } from 'react';
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
@@ -10,14 +11,13 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 import CodeIcon from '@material-ui/icons/Code';
 
-import useStyles from '../../hooks/useStyles';
-import codeExample from './code.example';
+import useStyles from '../hooks/useStyles';
 
-const CodeContainer = () => {
+const CodeExample = ({ codeExample }) => {
   const classes = useStyles();
 
   return (
-    <Accordion defaultExpanded>
+    <Accordion>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <CodeIcon color="secondary" fontSize="small" />
         <Typography color="secondary" variant="body2">
@@ -39,4 +39,4 @@ const CodeContainer = () => {
   );
 };
 
-export default memo(CodeContainer);
+export default memo(CodeExample);

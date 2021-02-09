@@ -8,21 +8,22 @@ import Typography from '@material-ui/core/Typography';
 
 import useStyles from './hooks/useStyles';
 
+import ExampleWrapper from './components/Example.wrapper';
 import SquigglyGlitchExample from './containers/SquigglyGlitch.example/Index';
+import ClipGlitchExample from './containers/ClipGlitch.example/Index';
 
 const App = () => {
   const classes = useStyles();
 
   return (
     <main className={classes.root}>
-      <Accordion defaultExpanded>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant="h6">Glitch Squiggly</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <SquigglyGlitchExample />
-        </AccordionDetails>
-      </Accordion>
+      <ExampleWrapper title="Squiggly Glitch">
+        <SquigglyGlitchExample />
+      </ExampleWrapper>
+
+      <ExampleWrapper title="Clip Glitch">
+        <ClipGlitchExample />
+      </ExampleWrapper>
     </main>
   );
 };

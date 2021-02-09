@@ -1,60 +1,49 @@
 import React, { memo } from 'react';
 
-import GlitchSquiggly from 'src/GlitchSquiggly/Index';
+import GlitchClip from 'src/GlitchClip/Index';
 
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import grootImg from '../../../static/img/groot.jpg';
+import boliImg from '../../../static/img/boli.jpg';
 import useSliderValue from '../../hooks/useSliderValue';
 import useSwitcherValue from '../../hooks/useSwitcherValue';
 import useStyles from '../../hooks/useStyles';
 
 import CodeExample from '../../components/Code.example';
 import GlitchExample from '../../components/Glitch.example';
-import PropsContainer from './Props.container';
+import PropContainer from './Props.container';
+
 import codeExample from './code.example';
 
-const SquigglyGlitchExample = () => {
+const ClipGlitchExample = () => {
   const classes = useStyles();
 
-  const [durationText, setDurationText] = useSliderValue(820);
-  const [baseFrequencyText, setBaseFrequencyText] = useSliderValue(0.02);
-  const [scaleNoiseText, setScaleNoiseText] = useSliderValue(9);
+  const [durationText, setDurationText] = useSliderValue(3000);
   const [disabledText, setDisabledText] = useSwitcherValue(false);
   const [onHoverText, setOnHoverText] = useSwitcherValue(false);
 
-  const [durationImg, setDurationImg] = useSliderValue(430);
-  const [baseFrequencyImg, setBaseFrequencyImg] = useSliderValue(0.2);
-  const [scaleNoiseImg, setScaleNoiseImg] = useSliderValue(5);
+  const [durationImg, setDurationImg] = useSliderValue(4000);
   const [disabledImg, setDisabledImg] = useSwitcherValue(false);
   const [onHoverImg, setOnHoverImg] = useSwitcherValue(false);
 
   return (
     <>
       <Paper className={classes.paper} elevation={3}>
-        <PropsContainer
+        <PropContainer
           title="props Glitch (text):"
           duration={durationText}
           setDuration={setDurationText}
-          baseFrequency={baseFrequencyText}
-          setBaseFrequency={setBaseFrequencyText}
-          scaleNoise={scaleNoiseText}
-          setScaleNoise={setScaleNoiseText}
           disabled={disabledText}
           setDisabled={setDisabledText}
           onHover={onHoverText}
           setOnHove={setOnHoverText}
         />
         <br />
-        <PropsContainer
-          title="props Glitch (background image):"
+        <PropContainer
+          title="props Glitch (img):"
           duration={durationImg}
           setDuration={setDurationImg}
-          baseFrequency={baseFrequencyImg}
-          setBaseFrequency={setBaseFrequencyImg}
-          scaleNoise={scaleNoiseImg}
-          setScaleNoise={setScaleNoiseImg}
           disabled={disabledImg}
           setDisabled={setDisabledImg}
           onHover={onHoverImg}
@@ -65,21 +54,18 @@ const SquigglyGlitchExample = () => {
       </Paper>
 
       <GlitchExample>
-        <GlitchSquiggly
-          baseFrequency={baseFrequencyImg}
+        <GlitchClip
           disabled={disabledImg}
           duration={durationImg}
           onHover={onHoverImg}
-          scaleNoise={scaleNoiseImg}
         >
-          <img alt="img-glitch" className={classes.exampleImg} src={grootImg} />
-        </GlitchSquiggly>
-        <GlitchSquiggly
-          baseFrequency={baseFrequencyText}
+          <img alt="img-glitch" className={classes.exampleImg} src={boliImg} />
+        </GlitchClip>
+
+        <GlitchClip
           disabled={disabledText}
           duration={durationText}
           onHover={onHoverText}
-          scaleNoise={scaleNoiseText}
         >
           <Typography
             color="error"
@@ -87,12 +73,12 @@ const SquigglyGlitchExample = () => {
             variant="h3"
             suppressContentEditableWarning
           >
-            Glitch Squiggly
+            Glitch Clip
           </Typography>
-        </GlitchSquiggly>
+        </GlitchClip>
       </GlitchExample>
     </>
   );
 };
 
-export default memo(SquigglyGlitchExample);
+export default memo(ClipGlitchExample);

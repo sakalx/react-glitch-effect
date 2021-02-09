@@ -4,12 +4,12 @@ import { render } from 'react-dom';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import VerticalTabs from './components/Navigation/Index';
-import AppBar from './components/AppBar/Index';
+import VerticalTabs from './App/components/Navigation/Index';
+import AppBar from './App/components/AppBar/Index';
 import GlitchSquiggly from '../../src/GlitchSquiggly/Index';
 import style from './style';
 
-import SimpleAccordion from './components/Accordion';
+import SimpleAccordion from './App/components/Accordion';
 
 const App = () => {
   const [isDisabledGlitch, setDisabledGlitch] = useState({

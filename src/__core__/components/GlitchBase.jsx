@@ -1,4 +1,4 @@
-import React, { useRef, memo } from 'react';
+import React, { useRef, cloneElement, memo } from 'react';
 import PropTypes from 'prop-types';
 
 import useOnChangeAnimationEffect from 'core/hooks/useOnChangeAnimationEffect';
@@ -39,7 +39,7 @@ const GlitchBase = ({
     <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave} {...rest}>
       <div ref={glitchAnimationRef}>
         {Array.isArray(children)
-          ? [children[0], React.cloneElement(children[1], { rootRef: glitchAnimationRef, key: 1 })]
+          ? [children[0], cloneElement(children[1], { rootRef: glitchAnimationRef, key: 1 })]
           : children}
       </div>
     </div>
