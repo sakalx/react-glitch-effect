@@ -1,14 +1,55 @@
-Getting Started
-npm install gh-pages --save-dev
-
 # React glitch-effect-components
  ________________________________________________________
 [DEMO](https://sakalx.github.io/react-glitch-effect/)
  ________________________________________________________
  ________________________________________________________
-// TEST commit author
+
+
+## Squiggly Glitch Component
+`import GlitchClip from 'react-glitch-effect/core/GlitchSquiggly';`
+
+#### Props
+| Name | Type | Default |
+| --- | --- | --- |
+| **disabled** | `boolean` | *false* |
+| **duration** | `string` | *3s* |
+| **iterationCount** | `string` | *infinite* |
+| **onHover** | `boolean` | *false*
+| **baseFrequency** | `number` | *0.02*
+| **scaleNoise** | `number` | *5*
+ ________________________________________________________
+ ________________________________________________________
+
+### Example Squiggly glitch effect component
+ ```javascript
+import React, { useState } from 'react';
+import GlitchSquiggly from 'react-glitch-effect/core/GlitchSquiggly';
+
+const MyComponent = () => {
+  const [isDisabled, setDisabled] = useState(false);
+
+  const handleToggleGlitch = () => {
+    setDisabled(!isDisabled);
+  };
+
+  return (
+    <div>
+      <button onClick={handleToggleGlitch}>TOGGLE EFFECT</button>
+
+      <GlitchSquiggly disabled={isDisabled}>
+        <h1>GlitchSquiggly</h1>
+      </GlitchSquiggly>
+    </div>
+  )
+};
+ ```
+
+ ________________________________________________________
+ ________________________________________________________
+
+
 ## Clip Glitch Component
-`import GlitchClip from 'react-glitch-effect/core/Clip';`
+`import GlitchClip from 'react-glitch-effect/core/GlitchClip';`
 
 #### Props
 | Name | Type | Default |
@@ -23,7 +64,7 @@ npm install gh-pages --save-dev
 ### Example Clip glitch effect component
  ```javascript
  import React from 'react';
- import GlitchClip from 'react-glitch-effect/core/Clip';
+ import GlitchClip from 'react-glitch-effect/core/GlitchClip';
  
 const MyComponent = () => {
     return (
@@ -75,7 +116,7 @@ const MyComponent = () => {
  ________________________________________________________
  
 ## Text Glitch Component
-`import GlitchClip from 'react-glitch-effect/core/Text';`
+`import GlitchClip from 'react-glitch-effect/core/GlitchText';`
 
 #### Props
 | Name | Type | Default |
@@ -93,7 +134,7 @@ const MyComponent = () => {
 ### Example Text glitch effect component
 ```javascript
 import React, {useState} from 'react';
-import GlitchText from 'react-glitch-effect/core/Text';
+import GlitchText from 'react-glitch-effect/core/GlitchText';
 
  const MyComponent = () => {
    const [isDisabled, setDisabled] = useState(false);

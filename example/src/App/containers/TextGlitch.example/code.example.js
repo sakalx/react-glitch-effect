@@ -1,6 +1,6 @@
 export default `
 import React, {useState} from 'react';
-import GlitchText from 'react-glitch-effect/core/Text';
+import GlitchText from 'react-glitch-effect/core/GlitchText';
 
  const MyComponent = () => {
    const [isDisabled, setDisabled] = useState(false);

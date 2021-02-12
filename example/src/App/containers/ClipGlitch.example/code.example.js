@@ -1,6 +1,6 @@
 export default `
 import React from 'react';
-import GlitchClip from 'react-glitch-effect/core/Clip';
+import GlitchClip from 'react-glitch-effect/core/GlitchClip';
 
 const MyComponent = () => {
     return (
