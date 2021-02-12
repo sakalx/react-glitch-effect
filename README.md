@@ -6,7 +6,7 @@
 
 
 ## Squiggly Glitch Component
-`import GlitchClip from 'react-glitch-effect/core/GlitchSquiggly';`
+`import GlitchSquiggly from 'react-glitch-effect/core/GlitchSquiggly';`
 
 #### Props
 | Name | Type | Default |
@@ -116,7 +116,7 @@ const MyComponent = () => {
  ________________________________________________________
  
 ## Text Glitch Component
-`import GlitchClip from 'react-glitch-effect/core/GlitchText';`
+`import GlitchText from 'react-glitch-effect/core/GlitchText';`
 
 #### Props
 | Name | Type | Default |
