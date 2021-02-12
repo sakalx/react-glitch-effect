@@ -1,6 +1,6 @@
 {
   "name": "react-glitch-effect",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "A glitch effects",
   "main": "dist/index.js",
   "scripts": {
