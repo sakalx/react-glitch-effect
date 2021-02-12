@@ -13,9 +13,9 @@ const GlitchExample = ({ children }) => {
     <Paper className={classes.paper} elevation={2}>
       <aside className={classes.exampleContainer}>
         <header className={classes.exampleText}>
-          {textGlitch}
+          {textGlitch && textGlitch}
         </header>
-        {imgGlitch}
+        {imgGlitch && imgGlitch}
       </aside>
     </Paper>
   );
