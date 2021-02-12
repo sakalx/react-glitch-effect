@@ -1,7 +1,7 @@
 import React, { createElement, memo } from 'react';
 import PropTypes from 'prop-types';
 
-import GlitchBase from 'core/components/GlitchBase';
+import GlitchBase from '../__core__/components/GlitchBase';
 
 import './style/index.css';
 
