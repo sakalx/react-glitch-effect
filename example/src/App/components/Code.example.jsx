@@ -17,7 +17,7 @@ const CodeExample = ({ codeExample }) => {
   const classes = useStyles();
 
   return (
-    <Accordion>
+    <Accordion defaultExpanded>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <CodeIcon color="secondary" fontSize="small" />
         <Typography color="secondary" variant="body2">
