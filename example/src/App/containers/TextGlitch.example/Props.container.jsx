@@ -14,6 +14,8 @@ import SwitchProp from '../../components/Switch.prop';
 
 const PropsExample = ({
   title,
+  colors,
+  setColors,
   duration,
   setDuration,
   disabled,
@@ -43,6 +45,23 @@ const PropsExample = ({
           </SliderProp>
 
           <div className={classes.row}>
+            <fieldset className={classes.fieldset}>
+              <Typography component="legend" color="textSecondary" variant="body2">
+                color1 / color2
+              </Typography>
+              <input
+                name="color1"
+                onChange={setColors}
+                type="color"
+                value={colors.color1}
+              />
+              <input
+                name="color2"
+                onChange={setColors}
+                type="color"
+                value={colors.color2}
+              />
+            </fieldset>
             <SwitchProp
               setValue={setDisabled}
               title="disabled"

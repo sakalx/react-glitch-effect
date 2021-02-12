@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import loliImg from '../../../static/img/loli.jpg';
+import useColorValue from '../../hooks/useColorValue';
 import useSliderValue from '../../hooks/useSliderValue';
 import useSwitcherValue from '../../hooks/useSwitcherValue';
 import useStyles from '../../hooks/useStyles';
@@ -16,17 +17,13 @@ import PropContainer from './Props.container';
 
 import codeExample from './code.example';
 
-// * color1: string,
-//  * color2: string,
-//  * component: string,
-//  * duration: number,
-//  * iterationCount: string,
-//  * disabled: bool,
-//  * onHover: bool,
-
 const TextGlitchExample = () => {
   const classes = useStyles();
 
+  const [colors, setColors] = useColorValue({
+    color1: '#4ca8e5',
+    color2: '#c33b6b',
+  });
   const [durationText, setDurationText] = useSliderValue(2000);
   const [disabledText, setDisabledText] = useSwitcherValue(false);
   const [onHoverText, setOnHoverText] = useSwitcherValue(false);
@@ -36,6 +33,8 @@ const TextGlitchExample = () => {
       <Paper className={classes.paper} elevation={3}>
         <PropContainer
           title="props Glitch (text):"
+          colors={colors}
+          setColors={setColors}
           duration={durationText}
           setDuration={setDurationText}
           disabled={disabledText}
@@ -51,6 +50,8 @@ const TextGlitchExample = () => {
         <img alt="img-glitch" className={classes.exampleImg} src={loliImg} />
         <GlitchText
           component="header"
+          color1={colors.color1}
+          color2={colors.color2}
           disabled={disabledText}
           duration={durationText}
           onHover={onHoverText}
