@@ -5,7 +5,7 @@ import GlitchText from 'src/GlitchText/Index';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import loliImg from '../../../static/img/main.jpg';
+import loliImg from '../../../static/img/loli.jpg';
 import useSliderValue from '../../hooks/useSliderValue';
 import useSwitcherValue from '../../hooks/useSwitcherValue';
 import useStyles from '../../hooks/useStyles';
@@ -50,12 +50,13 @@ const TextGlitchExample = () => {
       <GlitchExample>
         <img alt="img-glitch" className={classes.exampleImg} src={loliImg} />
         <GlitchText
+          component="header"
           disabled={disabledText}
           duration={durationText}
           onHover={onHoverText}
         >
           <Typography
-            color="error"
+            color="textSecondary"
             contentEditable="true"
             variant="h2"
             suppressContentEditableWarning

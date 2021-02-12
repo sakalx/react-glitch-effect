@@ -30,7 +30,7 @@ const PropsContainer = ({
   return (
     <Accordion>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <Typography color="primary" variant="body2">{title}</Typography>
+        <Typography color="textSecondary" variant="body2">{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <div className={classes.fullWidth}>
