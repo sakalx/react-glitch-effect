@@ -23,6 +23,7 @@ export default makeStyles(() => ({
     flex: '1 1 500px',
     margin: '6px',
     padding: '6px 12px',
+    width: '100%',
   },
   exampleContainer: {
     position: 'relative',
