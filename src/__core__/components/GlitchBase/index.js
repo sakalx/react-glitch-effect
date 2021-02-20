@@ -1,11 +1,11 @@
 import React, { useRef, cloneElement, memo } from 'react';
 import PropTypes from 'prop-types';
 
-import useOnChangeAnimationEffect from '../hooks/useOnChangeAnimationEffect';
-import useOnChangeCssVarEffect from '../hooks/useOnChangeCssVarEffect';
-import useOnChangeDisabledEffect from '../hooks/useOnChangeDisabledEffect';
-import useOnHover from '../hooks/useOnHover';
-import useToggleAnimation from '../hooks/useToggleAnimation';
+import useOnChangeAnimationEffect from '../../hooks/useOnChangeAnimationEffect';
+import useOnChangeCssVarEffect from '../../hooks/useOnChangeCssVarEffect';
+import useOnChangeDisabledEffect from '../../hooks/useOnChangeDisabledEffect';
+import useOnHover from '../../hooks/useOnHover';
+import useToggleAnimation from '../../hooks/useToggleAnimation';
 
 const GlitchBase = ({
   children,

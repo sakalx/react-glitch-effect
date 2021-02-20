@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-import GlitchText from 'src/GlitchText/Index';
+import GlitchText from 'src/GlitchText';
 
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';

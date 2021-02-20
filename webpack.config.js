@@ -43,6 +43,7 @@ module.exports = {
 
   resolve: {
     extensions: ['.js', '.jsx'],
+    mainFiles: ['index', 'Index'],
     alias: {
       core: path.resolve(__dirname, 'src/__core__'),
       src: path.resolve(__dirname, 'src'),

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-import GlitchClip from 'src/GlitchClip/Index';
+import GlitchClip from 'src/GlitchClip';
 
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';

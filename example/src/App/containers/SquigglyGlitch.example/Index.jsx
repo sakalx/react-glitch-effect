@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-import GlitchSquiggly from 'src/GlitchSquiggly/Index';
+import GlitchSquiggly from 'src/GlitchSquiggly';
 
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
