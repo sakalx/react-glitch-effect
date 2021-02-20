@@ -12,7 +12,6 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["core", "./src/__core__"],
           ["src", "./src"]
         ],
         "extensions": [".js", ".jsx", ".json"]
