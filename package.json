@@ -4,9 +4,9 @@
   "description": "A glitch effects",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack serve --mode development --colors --progress --display-error-details",
+    "start": "webpack serve --mode development --color --progress",
     "transpile": "babel src -d core --copy-files",
-    "build": "webpack --mode production --colors --progress --display-error-details",
+    "build": "webpack --mode production --color --progress",
     "deploy": "gh-pages -d example/dist",
     "publish-demo": "npm run build && npm run deploy",
     "prepublishOnly": "npm run transpile",
