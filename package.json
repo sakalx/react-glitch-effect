@@ -63,7 +63,7 @@
     "style-loader": "^2.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.2",
